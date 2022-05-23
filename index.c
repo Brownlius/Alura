@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <locale.h>
 #define NUMERO_TENTATIVAS 3 
-int main()
-    {   
+int main(){
+
+    setlocale(LC_ALL, "Portuguese_Brasil");
+
     printf("\tJogo de adivinhação\n");
     printf("\t-------------------");
      
