@@ -21,16 +21,18 @@ int main(){
 
         int acertou = (chute == numeroSecreto);
         int menor = (chute < numeroSecreto);
+        int maior = chute > numeroSecreto;
 
         if(acertou){
             printf("Parabéns! Você acertou\n");
             break;
-        }else if(menor){
+        }
+        else if(menor){
             printf("Você chutou um número menor que o correto.\n");       
-        }else{
+        }
+        else if(maior){
             printf("Você chutou um número maior que o correto\n");
         }
-
     }
     
     return 0;
