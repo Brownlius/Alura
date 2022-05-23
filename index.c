@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <locale.h>
+#include <time.h>
 // #define NUMERO_TENTATIVAS 3 
 int main(){
 
@@ -10,7 +11,8 @@ int main(){
     printf("\tJogo de adivinhação\n");
     printf("\t-------------------");
      
-    int numeroSecreto = 42;
+    srand(time(0));
+    int numeroSecreto = rand() % 100;
     int chute;
     int tentativas = 0;
     double pontos = 1000;
@@ -46,7 +48,11 @@ int main(){
             printf("Você chutou um número maior que o correto\n");
         }
         double pontosPerdidos = abs(chute - numeroSecreto) / 2.0;
+        if(pontos > 0){
         pontos = pontos - pontosPerdidos;
+        }else{
+            pontos = 0;
+        }
     }
         printf("%.2f\n", pontos);
 
