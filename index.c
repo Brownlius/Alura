@@ -11,11 +11,10 @@ int main(){
      
     int numeroSecreto = 42;
     int chute;
-    int ganhou = 0;
     int tentativas = 0;
     
     // for (int i = 0; i < NUMERO_TENTATIVAS; i++){
-    while(ganhou == 0){
+    while(1){
 
         tentativas++;
 
@@ -35,8 +34,8 @@ int main(){
 
         if(acertou){
             printf("Parabéns! Você acertou\n");
-            ganhou = 1;
-            printf("Você acertou na tentativa %d", tentativas);
+             printf("Você acertou na tentativa %d", tentativas);
+            break;
         }
         else if(menor){
             printf("Você chutou um número menor que o correto.\n");       
