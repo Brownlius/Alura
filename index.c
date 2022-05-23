@@ -82,6 +82,14 @@ int main(){
 	// soma = soma + i;
     // }
     // printf("A soma dos números é: %d", soma);
+    // exercício tabuada
+    // int num;
+    // printf("Digite um número a ser calculado: ");
+    // scanf("%d", &num);
+    // for(int i = 1; i <= 10; i++){
+    //     int mult = num * i;
+    //     printf("%d X %d = %d\n",num, i, mult);
+    // }
     
     return 0;
    
