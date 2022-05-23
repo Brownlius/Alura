@@ -3,42 +3,53 @@
 #include <stdbool.h>
 #include <locale.h>
 #include <time.h>
-// #define NUMERO_TENTATIVAS 3 
+
 int main(){
 
     setlocale(LC_ALL, "Portuguese_Brasil");
 
     printf("\tJogo de adivinhação\n");
-    printf("\t-------------------");
-     
+    printf("\t-------------------\n");
+
+    int nivel = 0;
+    int tentativasTotal = 0;
     srand(time(0));
     int numeroSecreto = rand() % 100;
     int chute;
     int tentativas = 0;
-    double pontos = 1000;
+    int acertou = 0;
+
+    printf("O nível no qual você quer jogar? Fácil (1), Médio (2) ou Difícil (3).\n");
+    scanf("%d", &nivel);
     
-    // for (int i = 0; i < NUMERO_TENTATIVAS; i++){
-    while(1){
+    if(nivel == 1){
+        tentativasTotal = 100;
+    }else if(nivel == 2){
+        tentativasTotal = 10;
+    }else if(nivel == 3){
+        tentativasTotal = 5;
+    }else{
+        printf("Dificuldade inválida! Digite novamente.");
+        scanf("%d", &nivel);
+    }
 
-        tentativas++;
-
-        printf("\nDiga seu chute!\n");
+    for (int i = 0; i <= tentativasTotal; i++){
+        printf("\nDiga seu chute:\n");
         scanf("%d", &chute);
 
         if(chute < 0){
             printf("Você não pode chutar números negativos.\n");
             continue;
         }
-
+        tentativas++ ;
         printf("Você chutou: %d\n", chute);
 
-        int acertou = (chute == numeroSecreto);
+         acertou = (chute == numeroSecreto);
         int menor = (chute < numeroSecreto);
         int maior = chute > numeroSecreto;
 
         if(acertou){
-            printf("Parabéns! Você acertou\n");
-             printf("Você acertou na tentativa %d\n", tentativas);
+
             break;
         }
         else if(menor){
@@ -47,15 +58,13 @@ int main(){
         else if(maior){
             printf("Você chutou um número maior que o correto\n");
         }
-        double pontosPerdidos = abs(chute - numeroSecreto) / 2.0;
-        if(pontos > 0){
-        pontos = pontos - pontosPerdidos;
-        }else{
-            pontos = 0;
-        }
     }
-        printf("%.2f\n", pontos);
-
+        if(acertou){
+            printf("Parabéns! Você acertou.\n");
+            printf("Você acertou na tentativa. %d\n", tentativas);
+        }else{
+            printf("você não acertou. Acabou as tentativas\n");
+        }
 
 
 
