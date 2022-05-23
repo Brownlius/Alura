@@ -21,17 +21,22 @@ int main(){
 
     printf("O nível no qual você quer jogar? Fácil (1), Médio (2) ou Difícil (3).\n");
     scanf("%d", &nivel);
+
+        switch (nivel){
+        case 1:
+            tentativasTotal = 100;
+            break;
+        case 2:
+            tentativasTotal = 10;
+            break;
+        case 3:
+            tentativasTotal = 5;
+            break;
+        default:
+            printf("Dificuldade inválida! Digite novamente.");
+            scanf("%d", &nivel);
+        }
     
-    if(nivel == 1){
-        tentativasTotal = 100;
-    }else if(nivel == 2){
-        tentativasTotal = 10;
-    }else if(nivel == 3){
-        tentativasTotal = 5;
-    }else{
-        printf("Dificuldade inválida! Digite novamente.");
-        scanf("%d", &nivel);
-    }
 
     for (int i = 0; i <= tentativasTotal; i++){
         printf("\nDiga seu chute:\n");
@@ -49,7 +54,6 @@ int main(){
         int maior = chute > numeroSecreto;
 
         if(acertou){
-
             break;
         }
         else if(menor){
