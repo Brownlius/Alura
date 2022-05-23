@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#define NUMERO_TENTATIVAS 3 
 int main()
     {   
     printf("\tJogo de adivinhação\n");
@@ -7,8 +8,8 @@ int main()
      
     int numeroSecreto = 42;
     int chute;
-        
-    for (int i = 0; i < 3; i++){
+    
+    for (int i = 0; i < NUMERO_TENTATIVAS; i++){
     
         printf("\nDiga seu chute!\n");
         scanf("%d", &chute);
@@ -32,4 +33,3 @@ int main()
     return 0;
    
     }
-	
