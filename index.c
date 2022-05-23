@@ -26,14 +26,19 @@ int main(){
             printf("Dificuldade inválida! Digite novamente.");
             scanf("%d", &nivel);
         }
-        if (nivel == 1){
-                tentativasTotal = 100;
-        }if (nivel == 2){
-                tentativasTotal = 10;
-        }if (nivel == 3){
-                tentativasTotal = 5;
-        }
         
+        switch (nivel){
+            case 1:
+                tentativasTotal = 100;
+                break;
+            case 2:
+                tentativasTotal = 10;
+                break;
+            case 3:
+                tentativasTotal = 5;
+                break;
+        }
+
     for (int i = 0; i < tentativasTotal; i++){
         printf("\nDiga seu chute:\n");
         scanf("%d", &chute);
