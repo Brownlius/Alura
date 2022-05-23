@@ -34,7 +34,7 @@ int main(){
 
         if(acertou){
             printf("Parabéns! Você acertou\n");
-             printf("Você acertou na tentativa %d", tentativas);
+             printf("Você acertou na tentativa %d\n", tentativas);
             break;
         }
         else if(menor){
@@ -44,7 +44,16 @@ int main(){
             printf("Você chutou um número maior que o correto\n");
         }
     }
-    
+    //exercício for
+    // for(int i = 1; i <= 100; i++){
+	// printf("%d\n", i);
+    // }
+    //exercício while
+    // int i = 1;
+    // while( i != 101){
+    //   printf("%d\n", i++);  
+    // }
+
     return 0;
    
     }
