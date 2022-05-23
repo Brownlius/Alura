@@ -50,10 +50,16 @@ int main(){
     // }
     //exercício while
     // int i = 1;
-    // while( i != 101){
+    // while( i <= 100){
     //   printf("%d\n", i++);  
     // }
-
+    // exercício for soma
+    int soma = 0; 
+    for(int i = 1; i <= 100; i++){
+	soma = soma + i;
+    }
+    printf("A soma dos números é: %d", soma);
+    
     return 0;
    
     }
