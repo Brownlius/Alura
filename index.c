@@ -12,7 +12,7 @@ int main(){
     int numeroSecreto = 42;
     int chute;
     int tentativas = 0;
-    int pontos = 1000;
+    double pontos = 1000;
     
     // for (int i = 0; i < NUMERO_TENTATIVAS; i++){
     while(1){
@@ -44,12 +44,12 @@ int main(){
         else if(maior){
             printf("Você chutou um número maior que o correto\n");
         }
-        int pontosPerdidos = (chute - numeroSecreto) /2;
+        double pontosPerdidos = (chute - numeroSecreto)/2.0;
         pontos = pontos - pontosPerdidos;
     }
     
 
-        printf("%d\n", pontos);
+        printf("%.2f\n", pontos);
 
 
 
