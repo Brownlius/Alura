@@ -12,6 +12,7 @@ int main(){
     int numeroSecreto = 42;
     int chute;
     int tentativas = 0;
+    int pontos = 1000;
     
     // for (int i = 0; i < NUMERO_TENTATIVAS; i++){
     while(1){
@@ -43,7 +44,24 @@ int main(){
         else if(maior){
             printf("Você chutou um número maior que o correto\n");
         }
+        int pontosPerdidos = (chute - numeroSecreto) /2;
+        pontos = pontos - pontosPerdidos;
     }
+    
+
+        printf("%d\n", pontos);
+
+
+
+
+
+
+
+
+
+
+
+
     //exercício for
     // for(int i = 1; i <= 100; i++){
 	// printf("%d\n", i);
@@ -54,11 +72,11 @@ int main(){
     //   printf("%d\n", i++);  
     // }
     // exercício for soma
-    int soma = 0; 
-    for(int i = 1; i <= 100; i++){
-	soma = soma + i;
-    }
-    printf("A soma dos números é: %d", soma);
+    // int soma = 0; 
+    // for(int i = 1; i <= 100; i++){
+	// soma = soma + i;
+    // }
+    // printf("A soma dos números é: %d", soma);
     
     return 0;
    
