@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <locale.h>
 // #define NUMERO_TENTATIVAS 3 
@@ -44,11 +45,9 @@ int main(){
         else if(maior){
             printf("Você chutou um número maior que o correto\n");
         }
-        double pontosPerdidos = (chute - numeroSecreto)/2.0;
+        double pontosPerdidos = abs(chute - numeroSecreto) / 2.0;
         pontos = pontos - pontosPerdidos;
     }
-    
-
         printf("%.2f\n", pontos);
 
 
