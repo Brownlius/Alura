@@ -7,3 +7,4 @@ void desenhaForca();
 int enforcou();
 int ganhou();
 void adicionaPalavra();
+int chutesErrados();
