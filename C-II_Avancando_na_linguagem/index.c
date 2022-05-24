@@ -52,7 +52,7 @@ void desenhaForca(){
 
 void escolhePalavra(){
     if(f == 0){
-        printf("Banco de dados não dispnível.\n\n")
+        printf("Banco de dados não disponível.\n\n")
         exit(1);
     }
     FILE* f;
@@ -70,6 +70,41 @@ void escolhePalavra(){
     }
     
     fclose(f);
+}
+
+void adicionaPalavra(){
+    char quer;
+    printf("Deseja adionar uma nova palavra? (S/N)");
+    scanf("%c",&quer);
+
+    if(quer == S){
+
+
+        char novaPalavra[20];
+        printf("Qual a nova palavra?");
+        scanf("%s", novaPalavra);
+
+        FILE* f;
+
+        f = open("palavras.txt", "r+");
+
+        if(f == 0){
+        printf("Banco de dados não disponível.\n\n")
+        exit(1);
+    }
+        int qtd;
+        fscanf(f, "%d", &qtd);
+        qtd++;
+
+        fseek(f, 0, SEEK_SET);
+        fprintf(f, "%d", qtd);
+
+        fseek(f,0 SEEK_END);
+        fprintf(f, "\n%s", novaPalavra);
+
+        fclose(f);
+    }
+
 }
 
 int enforcou(){
@@ -115,7 +150,7 @@ int main() {
 
     }while(!ganhou() && !enforcou());
 
-
+adicionaPalavra();
 
 
 
