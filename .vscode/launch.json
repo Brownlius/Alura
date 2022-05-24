@@ -7,13 +7,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "c:/Users/palme/Documents/GitHub/Alura",
-      "environment": [],
-      "program": "c:/Users/palme/Documents/GitHub/Alura/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": false,
+      "cwd": "c:/Users/infortech4/Documents/GitHub/Alura/C-II_Avancando_na_linguagem",
+      "program": "c:/Users/infortech4/Documents/GitHub/Alura/C-II_Avancando_na_linguagem/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
-      "console": "integratedTerminal",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
