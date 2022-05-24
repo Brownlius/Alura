@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
+void abertura(){
+
+    printf("***********************\n");
+    printf("     JOGO DA FORCA    \n");
+    printf("***********************\n\n");
+}
+
 int main() {
+
+    abertura();
 
     char palavraSecreta[20];
 
