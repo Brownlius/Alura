@@ -3,7 +3,7 @@
 
 char palavraSecreta[20];
 char chutes[26];
-int tentativas = 0;
+int chutesDados = 0;
 
 void abertura(){
 
@@ -16,14 +16,14 @@ void chuta(){
     char chute;
     printf("Digite o seu chute:");        
        scanf(" %c", &chute);
-        chutes[tentativas]   = chute;
-        tentativas++;
+        chutes[chutesDados]   = chute;
+        chutesDados++;
 }
 
 int jaChutou(char letra){
     int achou = 0;
         
-        for (int j = 0; j < (tentativas); j++){
+        for (int j = 0; j < (chutesDados); j++){
             if(chutes[j] == letra){
                 achou = 1;
                 break;
@@ -55,11 +55,11 @@ int enforcou(){
     
     int erros = 0;
 
-    for (int i = 0; i < tentativas; i++){
+    for (int i = 0; i < chutesDados; i++){
         
         int existe = 0;
 
-        for (int j = 0; j < tentativas; j++){
+        for (int j = 0; j < chutesDados; j++){
             if(chutes[i] == palavraSecreta[j]){
                 existe = 1;
                 break;
