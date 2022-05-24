@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include <stdlib.h>
+#include <stdlib.h> 
 #include "index.h"
 
 char palavraSecreta[20];
@@ -51,12 +51,13 @@ void desenhaForca(){
 }
 
 void escolhePalavra(){
+
+  FILE* f;
     if(f == 0){
-        printf("Banco de dados não disponível.\n\n")
+        printf("Banco de dados não disponível.\n\n");
         exit(1);
     }
-    FILE* f;
-
+  
     f = fopen("palavras.txt", "r");
 
     int qtdPalavras;
@@ -73,23 +74,23 @@ void escolhePalavra(){
 }
 
 void adicionaPalavra(){
+
+    FILE* f;
+    
     char quer;
     printf("Deseja adionar uma nova palavra? (S/N)");
-    scanf("%c",&quer);
+    scanf(" %c", &quer);
 
-    if(quer == S){
-
+    if(quer == 'S'){
 
         char novaPalavra[20];
         printf("Qual a nova palavra?");
         scanf("%s", novaPalavra);
 
-        FILE* f;
-
-        f = open("palavras.txt", "r+");
+        f = fopen("palavras.txt", "r+");
 
         if(f == 0){
-        printf("Banco de dados não disponível.\n\n")
+        printf("Banco de dados não disponível.\n\n");
         exit(1);
     }
         int qtd;
@@ -99,13 +100,13 @@ void adicionaPalavra(){
         fseek(f, 0, SEEK_SET);
         fprintf(f, "%d", qtd);
 
-        fseek(f,0 SEEK_END);
+        fseek(f,0, SEEK_END);
         fprintf(f, "\n%s", novaPalavra);
 
         fclose(f);
     }
-
 }
+
 
 int enforcou(){
     
@@ -150,7 +151,12 @@ int main() {
 
     }while(!ganhou() && !enforcou());
 
-adicionaPalavra();
+    if(ganhou()){
+        printf("Você conseguiu acertar a palavra! PARABÉNS.");
+    }else{
+        printf("Você infelizmente não acertou.\n
+        A palavra era %s", palavraSecreta);
+    }
 
 
 
