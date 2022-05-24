@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include "forca.h"
 
 char palavraSecreta[20];
 char chutes[26];
 int chutesDados = 0;
+
 
 void abertura(){
 
@@ -51,6 +53,7 @@ void escolhePalavra(){
     sprintf(palavraSecreta,"MELANCIA");
 
 }
+
 int enforcou(){
     
     int erros = 0;
@@ -72,19 +75,27 @@ int enforcou(){
     return erros >= strlen(palavraSecreta);
 }
 
+int ganhou(){
+    for (int i = 0; i < strlen(palavraSecreta); i++){
+
+        if(!jaChutou(palavraSecreta[i])){
+            return 0;
+        }
+    }
+    return 1;
+}
+
 int main() {
 
     abertura();
     escolhePalavra();
-    
-    int acertou = 0;
     
     do{ 
 
         chuta();
         desenhaForca();
 
-    }while(!acertou && !enforcou());
+    }while(!ganhou() && !enforcou());
 
 
 
