@@ -16,6 +16,18 @@ void chuta(char chutes[26], int* tentativas){
         (*tentativas)++;
 }
 
+int jaChutou(char letra, char chutes[26], int tentativas){
+    int achou = 0;
+        
+        for (int j = 0; j < (tentativas); j++){
+            if(chutes[j] == letra){
+                achou = 1;
+                break;
+            }
+        }
+    return achou;
+}
+
 int main() {
 
     abertura();
@@ -29,15 +41,11 @@ int main() {
     int tentativas = 0;
     
 
-    do{
+    do{ 
         for (int i = 0; i < strlen(palavraSecreta); i++){
-                int achou = 0;
-                for (int j = 0; j < tentativas; j++){
-                        if(chutes[j] == palavraSecreta[i]){
-                        achou = 1;
-                        break;
-                    }
-                }
+            
+            int achou = jaChutou(palavraSecreta[i], chutes, tentativas);
+
             if (achou){
                 printf("%c ", palavraSecreta[i]);
             }else{
