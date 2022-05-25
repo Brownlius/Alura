@@ -18,27 +18,34 @@ void move(char direcao){
     if(direcao != 'a' && direcao != 's' && direcao !='d' && direcao !='w' )
     return;
 
-    m.matrix[heroi.x][heroi.y] = '.';
+    int proxX = heroi.x;
+    int proxY = heroi.y;
 
 
     switch(direcao){
         case 'a':
-            m.matrix[heroi.x][heroi.y - 1] = '@';
-            heroi.y--;
-              break;
+            proxY--;
+            break;
         case 's':
-            m.matrix[heroi.x + 1][heroi.y] = '@';
-            heroi.x++;
+            proxX++;
             break;
         case 'd':
-            m.matrix[heroi.x][heroi.y + 1] = '@';
-            heroi.y++;
+            proxY++;
             break;
         case 'w':
-            m.matrix[heroi.x - 1][heroi.y] = '@';
-            heroi.x--;
+            proxX--;
             break;
     }
+    if(proxX >= m.linhas)
+        return;
+    if(proxY >= m.colunas)
+        return;
+    if(m.matrix[proxX][proxY] != '.')
+        return;
+    m.matrix[proxX][proxY] = '@';
+    m.matrix[heroi.x][heroi.y] = '.';
+    heroi.x = proxX;
+    heroi.y = proxY;    
 }
 int main() {
 	
