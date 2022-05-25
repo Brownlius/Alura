@@ -2,9 +2,7 @@
 #include <stdlib.h>
 #include "index.h"
 
-char** mapa;
-int linhas;
-int colunas;
+struct mapa m;
 int x;
 int y;
 
@@ -16,35 +14,35 @@ void lemapa() {
 		exit(1);
 	}
 
-	fscanf(f, "%d %d", &linhas, &colunas);
+	fscanf(f, "%d %d", &(m.linhas), &(m.colunas));
 	alocamapa();
 	
 	for(int i = 0; i < 5; i++) {
-		fscanf(f, "%s", mapa[i]);
+		fscanf(f, "%s", m.matrix[i]);
 	}
 
 	fclose(f);
 }
 
 void alocamapa() {
-	mapa = malloc(sizeof(char*) * linhas);
+	m.matrix = malloc(sizeof(char*) * (m.linhas));
 
-	for(int i = 0; i < linhas; i++) {
-		mapa[i] = malloc(sizeof(char) * colunas + 1);
+	for(int i = 0; i < (m.linhas); i++) {
+		m.matrix[i] = malloc(sizeof(char) * m.colunas + 1);
 	}
 }
 
 void liberamapa() {
-	for(int i = 0; i < linhas; i++) {
-		free(mapa[i]);
+	for(int i = 0; i < ((m.linhas)); i++) {
+		free(m.matrix[i]);
 	}
 
-	free(mapa);
+	free(m.matrix);
 }
 
 void imprimeMapa(){
-    for(int i = 0; i < linhas; i++) {
-		printf("%s\n", mapa[i]);
+    for(int i = 0; i < (m.linhas); i++) {
+		printf("%s\n", m.matrix[i]);
 	}
 }
 int acabou(){
@@ -53,9 +51,9 @@ int acabou(){
 
 int achaPosicao(){
 
-    for (int i = 0; i < linhas; i++){
-        for (int j = 0; j  < colunas; j++){
-            if(mapa[i][j] == '@'){
+    for (int i = 0; i < (m.linhas); i++){
+        for (int j = 0; j  < m.colunas; j++){
+            if(m.matrix[i][j] == '@'){
                 x = i;
                 y = j;
                 break;
@@ -71,19 +69,19 @@ int move(char direcao){
 
     switch(direcao){
         case 'a':
-            mapa[x][y - 1] = '@';
+            m.matrix[x][y - 1] = '@';
               break;
         case 's':
-            mapa[x + 1][y] = '@';
+            m.matrix[x + 1][y] = '@';
             break;
         case 'd':
-            mapa[x][y + 1] = '@';
+            m.matrix[x][y + 1] = '@';
             break;
         case 'w':
-            mapa[x - 1][y] = '@';
+            m.matrix[x - 1][y] = '@';
             break;
     }
-    mapa[x][y] = '.';
+    m.matrix[x][y] = '.';
 }
 int main() {
 	

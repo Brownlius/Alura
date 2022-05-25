@@ -1,6 +1,14 @@
 int achaPosicao();
+int move(char direcao);
 void alocamapa();
 void imprimeMapa();
 void lemapa();
 void liberamapa();
-void move(char direcao);
+
+struct mapa{
+
+    char** matrix;
+    int linhas;
+    int colunas;
+
+};
