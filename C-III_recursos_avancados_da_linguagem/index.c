@@ -5,6 +5,8 @@
 char** mapa;
 int linhas;
 int colunas;
+int x;
+int y;
 
 void lemapa() {
 	FILE* f;
@@ -40,13 +42,63 @@ void liberamapa() {
 	free(mapa);
 }
 
+void imprimeMapa(){
+    for(int i = 0; i < linhas; i++) {
+		printf("%s\n", mapa[i]);
+	}
+}
+int acabou(){
+    return 0;
+}
+
+int achaPosicao(){
+
+    for (int i = 0; i < linhas; i++){
+        for (int j = 0; j  < colunas; j++){
+            if(mapa[i][j] == '@'){
+                x = i;
+                y = j;
+                break;
+            }
+        }
+    }
+    return x, y;
+}
+
+int move(char direcao){
+    
+    achaPosicao();
+
+    switch(direcao){
+        case 'a':
+            mapa[x][y - 1] = '@';
+              break;
+        case 's':
+            mapa[x + 1][y] = '@';
+            break;
+        case 'd':
+            mapa[x][y + 1] = '@';
+            break;
+        case 'w':
+            mapa[x - 1][y] = '@';
+            break;
+    }
+    mapa[x][y] = '.';
+}
 int main() {
 	
 	lemapa();
 
-	for(int i = 0; i < linhas; i++) {
-		printf("%s\n", mapa[i]);
-	}
+    do{
 
+    imprimeMapa();
+
+    char comando;
+    scanf(" %c", &comando);
+    move(comando);
+
+    }while(!acabou());
+        
 	liberamapa();
+
 }
