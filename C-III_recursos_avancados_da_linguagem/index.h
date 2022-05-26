@@ -1,20 +1,10 @@
 #define CIMA 'w'
 #define BAIXO 's'
-#define ESQ 'a'
-#define DIR 'd'
-#define FANTASMA 'F'
+#define DIREITA 'd'
+#define ESQUERDA 'a'
 
-struct posicao{
-    int x;
-    int y;
-};
-typedef struct posicao POSICAO;
-
-int ehDirecao (char direcao);
-void fantasmas();
+int acabou();
 void move(char direcao);
 
-
-
-
-
+int ehdirecao(char direcao);
+void fantasmas();
