@@ -55,3 +55,24 @@ void imprimeMapa(MAPA* m){
 		printf("%s\n", m->matrix[i]);
 	}
 }
+
+int validaColisao(MAPA* m, int x, int y){
+	if(x >= m->linhas)
+        return 0;
+    if(y >= m->colunas)
+        return 0;
+	
+	return 1;
+}
+
+int ehVazia(MAPA* m, int x, int y){
+	return m->matrix[x][y] == '.';
+}
+
+void andaNoMapa(MAPA* m, int xOrigem, int yOrigem, int xDestino, int yDestino){
+
+	char personagem = m->matrix[xOrigem][yOrigem];
+	m->matrix[xDestino][yDestino] = personagem;
+	m->matrix[xOrigem][yOrigem] = VAZIO;
+	
+}
