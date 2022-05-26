@@ -1,11 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "index.h"
 #include "mapa.h"
 
 MAPA m;
 POSICAO heroi;
 
+int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino){
+
+    int opcoes[4][2] = {
+        {xatual, yatual +1},
+        {xatual + 1, yatual},
+        {xatual - 1, yatual},
+        {xatual, yatual - 1}
+    };
+
+    srand(time(0));
+    for (int i = 0; i < 10; i++){
+        int posicao =  rand() % 4;
+
+        if(ehvalida(&m, opcoes[posicao][0],opcoes[posicao][1])
+        && ehvazia(&m, opcoes[posicao][0],opcoes[posicao][1])){
+            *xdestino = opcoes[posicao][0];
+            *ydestino = opcoes[posicao][1];
+        
+            return 1;
+        }
+        
+    }
+            return 0;
+}
 
 int acabou() {
 	return 0;
@@ -61,6 +86,16 @@ void fantasmas() {
 	for(int i = 0; i < copia.linhas; i++) {
 		for(int j = 0; j < copia.colunas; j++) {
 			if(copia.matriz[i][j] == FANTASMA) {
+
+                int xdestino;
+                int ydestino;
+
+                int encontrou = direcaoFantasma(i, j, &xdestino, &ydestino);
+
+                if(encontrou){
+                    andanomapa(&m, i, j, xdestino, ydestino);
+                }
+
 				if(ehvalida(&m, i, j+1) && ehvazia(&m, i, j+1)) {
 					andanomapa(&m, i, j, i, j+1);
 				}

@@ -8,3 +8,4 @@ void move(char direcao);
 
 int ehdirecao(char direcao);
 void fantasmas();
+int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino);
