@@ -7,6 +7,7 @@
 MAPA m;
 POSICAO heroi;
 
+
 int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino){
 
     int opcoes[4][2] = {
@@ -20,7 +21,7 @@ int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino){
     for (int i = 0; i < 10; i++){
         int posicao =  rand() % 4;
 
-        if(podeandar(&m, opcoes[posicao][0],opcoes[posicao][1])){
+        if(podeandar(&m, FANTASMA, opcoes[posicao][0],opcoes[posicao][1])){
             *xdestino = opcoes[posicao][0];
             *ydestino = opcoes[posicao][1];
         
@@ -32,7 +33,7 @@ int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino){
 }
 
 int acabou() {
-    POSICAO pos; 
+    POSICAO pos; 	
     int heroinomapa = encontramapa(&m, &pos, HEROI);
 	return !heroinomapa;
 }
@@ -68,8 +69,10 @@ void move(char direcao) {
 			break;
 	}
 
-	if(!podeandar(&m, proximox, proximoy))
+	if(!podeandar(&m, HEROI, proximox, proximoy))
 		return;
+
+
 
 	andanomapa(&m, heroi.x, heroi.y, proximox, proximoy);
 	heroi.x = proximox;
@@ -94,7 +97,7 @@ void fantasmas() {
                     andanomapa(&m, i, j, xdestino, ydestino);
                 }
 
-				if(podeandar(&m, i, j+1)) {
+				if(podeandar(&m, FANTASMA, i, j+1)) {
 				    andanomapa(&m, i, j, i, j+1);
 				}
 			}

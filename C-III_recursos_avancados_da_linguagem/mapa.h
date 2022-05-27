@@ -16,7 +16,9 @@ void alocamapa(MAPA* m);
 void lemapa(MAPA* m);
 void liberamapa(MAPA* m);
 void imprimemapa(MAPA* m);
-int podeandar(MAPA* m, int x, int y);
+int podeandar(MAPA* m, char personagem, int x, int y);
+int ehparede();
+int ehpersonagem(MAPA* m, char personagem,int x,int y);
 struct posicao {
 	int x;
 	int y;

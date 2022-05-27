@@ -2,6 +2,7 @@
 #define BAIXO 's'
 #define DIREITA 'd'
 #define ESQUERDA 'a'
+#define PILULA 'p'
 
 int acabou();
 void move(char direcao);
