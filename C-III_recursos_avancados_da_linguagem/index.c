@@ -20,8 +20,7 @@ int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino){
     for (int i = 0; i < 10; i++){
         int posicao =  rand() % 4;
 
-        if(ehvalida(&m, opcoes[posicao][0],opcoes[posicao][1])
-        && ehvazia(&m, opcoes[posicao][0],opcoes[posicao][1])){
+        if(podeandar(&m, opcoes[posicao][0],opcoes[posicao][1])){
             *xdestino = opcoes[posicao][0];
             *ydestino = opcoes[posicao][1];
         
@@ -33,7 +32,9 @@ int direcaoFantasma(int xatual, int yatual, int* xdestino, int* ydestino){
 }
 
 int acabou() {
-	return 0;
+    POSICAO pos; 
+    int heroinomapa = encontramapa(&m, &pos, HEROI);
+	return !heroinomapa;
 }
 
 int ehdirecao(char direcao) {
@@ -67,10 +68,7 @@ void move(char direcao) {
 			break;
 	}
 
-	if(!ehvalida(&m, proximox, proximoy))
-		return;
-
-	if(!ehvazia(&m, proximox, proximoy))
+	if(!podeandar(&m, proximox, proximoy))
 		return;
 
 	andanomapa(&m, heroi.x, heroi.y, proximox, proximoy);
@@ -96,8 +94,8 @@ void fantasmas() {
                     andanomapa(&m, i, j, xdestino, ydestino);
                 }
 
-				if(ehvalida(&m, i, j+1) && ehvazia(&m, i, j+1)) {
-					andanomapa(&m, i, j, i, j+1);
+				if(podeandar(&m, i, j+1)) {
+				    andanomapa(&m, i, j, i, j+1);
 				}
 			}
 		}

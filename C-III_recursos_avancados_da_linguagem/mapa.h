@@ -16,7 +16,7 @@ void alocamapa(MAPA* m);
 void lemapa(MAPA* m);
 void liberamapa(MAPA* m);
 void imprimemapa(MAPA* m);
-
+int podeandar(MAPA* m, int x, int y);
 struct posicao {
 	int x;
 	int y;
@@ -24,7 +24,7 @@ struct posicao {
 
 typedef struct posicao POSICAO;
 
-void encontramapa(MAPA* m, POSICAO* p, char c);
+int encontramapa(MAPA* m, POSICAO* p, char c);
 
 int ehvalida(MAPA* m, int x, int y);
 int ehvazia(MAPA* m, int x, int y);
