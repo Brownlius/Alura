@@ -47,11 +47,6 @@ void liberamapa(MAPA* m) {
 	free(m->matriz);
 }
 
-void imprimemapa(MAPA* m) {
-	for(int i = 0; i < m->linhas; i++) {
-		printf("%s\n", m->matriz[i]);
-	}
-}
 
 int encontramapa(MAPA* m, POSICAO* p, char c) {
 
@@ -65,7 +60,6 @@ int encontramapa(MAPA* m, POSICAO* p, char c) {
 		}
 	}
 
-	// não encontramos!
 	return 0;
 }
 
