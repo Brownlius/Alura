@@ -64,14 +64,18 @@ int encontramapa(MAPA* m, POSICAO* p, char c) {
 			}
 		}
 	}
+
+	// não encontramos!
 	return 0;
 }
 
-int podeandar(MAPA* m, int x, int y) {
-    return 
-        ehvalida(m, x, y) && 
-        ehvazia(m, x, y);
+int podeandar(MAPA* m, char personagem, int x, int y) {
+	return 
+		ehvalida(m, x, y) && 
+		!ehparede(m, x, y) &&
+		!ehpersonagem(m, personagem, x, y);
 }
+
 int ehvalida(MAPA* m, int x, int y) {
 	if(x >= m->linhas) 
 		return 0;
@@ -81,9 +85,17 @@ int ehvalida(MAPA* m, int x, int y) {
 	return 1;	
 }
 
-int ehvazia(MAPA* m, int x, int y) {
-	return m->matriz[x][y] == VAZIO;
+int ehpersonagem(MAPA* m, char personagem, int x, int y) {
+	return
+		m->matriz[x][y] == personagem;
 }
+
+int ehparede(MAPA* m, int x, int y) {
+	return 
+		m->matriz[x][y] == PAREDE_VERTICAL ||
+		m->matriz[x][y] == PAREDE_HORIZONTAL;
+}
+
 
 void andanomapa(MAPA* m, int xorigem, int yorigem, 
 	int xdestino, int ydestino) {
