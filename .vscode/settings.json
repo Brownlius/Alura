@@ -32,6 +32,7 @@
   "files.associations": {
     "index.h": "c",
     "stdlib.h": "c",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
