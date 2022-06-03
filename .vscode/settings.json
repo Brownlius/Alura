@@ -31,6 +31,7 @@
   "C_Cpp.errorSquiggles": "Disabled",
   "files.associations": {
     "index.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "iostream": "cpp"
   }
 }
