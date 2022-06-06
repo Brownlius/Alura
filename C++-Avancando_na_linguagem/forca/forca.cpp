@@ -5,17 +5,17 @@
 #include <fstream>
 #include <ctime>
 #include <cstdlib>
-#include "letra_existe.cpp"
-#include "nao_acertou.cpp"
-#include "imprime_cabeca.cpp"
-#include "imprime_palavra.cpp"
-#include "imprime_erros.cpp"
-#include "chuta.cpp"
-#include "nao_enforcou.cpp"
-#include "le_arquivo.cpp"
-#include "adiciona_palavra.cpp"
-#include "sorteia_palavra.cpp"
-#include "salva_arquivo.cpp"
+#include "letra_existe.hpp"
+#include "nao_acertou.hpp"
+#include "imprime_cabeca.hpp"
+#include "imprime_palavra.hpp"
+#include "imprime_erros.hpp"
+#include "chuta.hpp"
+#include "nao_enforcou.hpp"
+#include "le_arquivo.hpp"
+#include "adiciona_palavra.hpp"
+#include "sorteia_palavra.hpp"
+#include "salva_arquivo.hpp"
 
 using namespace std;
 

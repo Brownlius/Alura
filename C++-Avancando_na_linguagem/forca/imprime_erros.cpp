@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-
+#include "imprime_erros.hpp"
 std::vector<char> chutes_errados;
 
 void imprime_erros(){

@@ -1,11 +1,12 @@
 #include <iostream>
 #include <map>
 #include <vector>
-#include "le_arquivo.cpp"
+#include "le_arquivo.hpp"
 
-std::string palavra_secreta; 
-std::map<char, bool> chutou;
-std::vector<char> chutes_errados;
+
+extern std::string palavra_secreta; 
+externstd::map<char, bool> chutou;
+extern std::vector<char> chutes_errados;
 
 std::vector<string> le_arquivo(){
     ifstream arquivo;

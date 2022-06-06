@@ -1,11 +1,10 @@
 #include <iostream>
 #include <string>
-#include <map>
-#include <vector>
+#include "salva_arquivo.hpp"
 
-string palavra_secreta; 
-map<char, bool> chutou;
-vector<char> chutes_errados;
+extern string palavra_secreta; 
+extern map<char, bool> chutou;
+extern vector<char> chutes_errados;
 
 void salva_arquivo(std::vector<std::string> nova_lista){
     std::ofstream arquivo;

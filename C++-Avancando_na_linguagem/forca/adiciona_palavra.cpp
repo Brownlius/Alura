@@ -2,7 +2,7 @@
 #include <string>
 #include <map>
 #include <vector>
-#include "le_arquivo.cpp"
+#include "le_arquivo.hpp"
 
 std::string palavra_secreta; 
 std::map<char, bool> chutou;

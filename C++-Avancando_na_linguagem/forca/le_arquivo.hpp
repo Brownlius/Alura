@@ -1,4 +1,4 @@
 #include <vector>
 #include <string>
 
-std::vector<string> le_arquivo();
+std::vector<std::string> le_arquivo();
