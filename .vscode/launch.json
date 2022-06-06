@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "c:/Users/infortech4/Documents/GitHub/Alura/C++-Conhecendo_linguagem_e_STL/forca",
-      "program": "c:/Users/infortech4/Documents/GitHub/Alura/C++-Conhecendo_linguagem_e_STL/forca/build/Debug/outDebug",
+      "cwd": "c:/Users/infortech4/Documents/GitHub/Alura/C++-Avancando_na_linguagem/forca",
+      "program": "c:/Users/infortech4/Documents/GitHub/Alura/C++-Avancando_na_linguagem/forca/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
