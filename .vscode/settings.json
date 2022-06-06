@@ -33,6 +33,7 @@
     "index.h": "c",
     "stdlib.h": "c",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "fstream": "cpp"
   }
 }
