@@ -1,8 +1,8 @@
-
+#include <vector>
+#include <string>
 #include "le_arquivo.hpp"
-#include "sorteia_palavra.hpp"
 
-extern std::string palavra_secreta; 
+extern std::string palavra_secreta;
 
 void sorteia_palavra(){
     std::vector<std::string> palavras = le_arquivo();

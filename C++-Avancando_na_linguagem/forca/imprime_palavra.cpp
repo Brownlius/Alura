@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
 #include <map>
-#include "imprime_palavra.hpp"
 
-extern std::string palavra_secreta; 
+extern std::string palavra_secreta;
 extern std::map<char, bool> chutou;
 
 void imprime_palavra(){

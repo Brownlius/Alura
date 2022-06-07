@@ -6,23 +6,21 @@
 #include <ctime>
 #include <cstdlib>
 #include "letra_existe.hpp"
-#include "nao_acertou.hpp"
-#include "imprime_cabeca.hpp"
-#include "imprime_palavra.hpp"
-#include "imprime_erros.hpp"
-#include "chuta.hpp"
-#include "nao_enforcou.hpp"
+#include "imprime_cabecalho.hpp"
 #include "le_arquivo.hpp"
-#include "adiciona_palavra.hpp"
 #include "sorteia_palavra.hpp"
-#include "salva_arquivo.hpp"
+#include "nao_enforcou.hpp"
+#include "imprime_erros.hpp"
+#include "imprime_palavra.hpp"
+#include "chuta.hpp"
+#include "adiciona_palavra.hpp"
+#include "nao_acertou.hpp"
 
 using namespace std;
 
 string palavra_secreta; 
 map<char, bool> chutou;
 vector<char> chutes_errados;
-
 
 int main () {
     imprime_cabecalho();
@@ -53,4 +51,6 @@ int main () {
             adiciona_palavra();
         }
     }
+    
+    cin.get();
 }
