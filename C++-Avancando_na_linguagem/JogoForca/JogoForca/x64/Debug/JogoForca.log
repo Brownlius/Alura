@@ -1,1 +1,10 @@
-﻿  JogoForca.vcxproj -> C:\Users\infortech4\Documents\GitHub\Alura\C++-Avancando_na_linguagem\JogoForca\x64\Debug\JogoForca.exe
+﻿  forca.cpp
+  nao_acertou.cpp
+  sorteia_palavra.cpp
+C:\Users\infortech4\Documents\GitHub\Alura\C++-Avancando_na_linguagem\JogoForca\JogoForca\sorteia_palavra.cpp(10,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+  Gerando Código...
+sorteia_palavra.obj : error LNK2005: main já definida no forca.obj
+sorteia_palavra.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > palavra_secreta" (?palavra_secreta@@3V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@A) já definida no forca.obj
+sorteia_palavra.obj : error LNK2005: "class std::map<char,bool,struct std::less<char>,class std::allocator<struct std::pair<char const ,bool> > > chutou" (?chutou@@3V?$map@D_NU?$less@D@std@@V?$allocator@U?$pair@$$CBD_N@std@@@2@@std@@A) já definida no forca.obj
+sorteia_palavra.obj : error LNK2005: "class std::vector<char,class std::allocator<char> > chutes_errados" (?chutes_errados@@3V?$vector@DV?$allocator@D@std@@@std@@A) já definida no forca.obj
+C:\Users\infortech4\Documents\GitHub\Alura\C++-Avancando_na_linguagem\JogoForca\x64\Debug\JogoForca.exe : fatal error LNK1169: encontrados um ou mais símbolos múltiplos definidos

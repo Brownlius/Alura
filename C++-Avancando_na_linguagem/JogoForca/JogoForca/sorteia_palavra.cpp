@@ -7,7 +7,7 @@
 std::string sorteia_palavra(){
     std::vector<std::string> palavras = le_arquivo();
 
-    srand(time(NULL));
+    srand(time(0));
     int indice_sorteado = rand() % palavras.size();
 
     palavra_secreta = palavras[indice_sorteado];

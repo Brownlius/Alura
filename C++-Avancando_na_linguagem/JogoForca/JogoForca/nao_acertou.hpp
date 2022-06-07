@@ -1,1 +1,1 @@
-bool nao_acertou(std::string palavra_secreta, std::map<char, bool> chutou);
+bool nao_acertou(std::string& palavra_secreta, std::map<char, bool>& chutou);
