@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 int main() {
 
 	Conta conta2;
@@ -14,7 +13,6 @@ int main() {
 
 	cout << "O saldo final da conta2 é" << conta2.getSaldo() << endl;
 	cout << "O nome do titular da conta2 é" << conta2.getSaldo() << endl;
-
 
 	return 0;
 }

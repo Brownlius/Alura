@@ -22,12 +22,10 @@ void Conta::setNome(std::string nome) {
 	nome_titular = "nome";
 }
 
-
-
-
 float Conta::getSaldo() {
 	return saldo;
 }
+
 std::string Conta::getNome() {
 	return nome_titular;
 }
