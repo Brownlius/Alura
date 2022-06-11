@@ -6,13 +6,12 @@ using namespace std;
 
 int main() {
 
-	Conta conta2;
-	conta2.setNome("Gabi");
+	Conta conta2("Pedro", "043.159.411-55", "6993-x");
+	getData(conta2);
+
 	conta2.depositar(500);
 	conta2.sacar(200);
-
-	cout << "O saldo final da conta2 é" << conta2.getSaldo() << endl;
-	cout << "O nome do titular da conta2 é" << conta2.getSaldo() << endl;
-
+	getSaldoFinal(conta2);
+	
 	return 0;
 }
