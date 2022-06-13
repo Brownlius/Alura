@@ -1,5 +1,7 @@
 #include "conta.hpp"
 
+int Conta::qtd_contas = 0;
+
 void Conta::sacar(float valorASacar) {
 	if (valorASacar <= 0 || valorASacar > saldo) {
 		std::cout << "Saldo insuficiente!" << std::endl;
@@ -31,13 +33,18 @@ std::string Conta::getCpf() {
 std::string Conta::getNumeroConta() {
 	return numero_conta;
 }
-Conta::Conta(std::string nome_titular, std::string cpf_titular, std::string numero_conta) :
+Conta::Conta(std::string nome_titular, std::string cpf_titular, std::string numero_conta) : //Construtor
 	nome_titular(nome_titular),
 	cpf_titular(cpf_titular),
 	numero_conta(numero_conta),
 	saldo(0)
 {
+	validaNameSize();
+	qtd_contas += 1;
+}
 
+Conta::~Conta() {																			//Destrutor
+	qtd_contas -= 1;
 }
 
 void getData(Conta& conta) {
@@ -45,9 +52,19 @@ void getData(Conta& conta) {
 	std::cout << "Nome do titular: " << conta.getNome() << std::endl;
 	std::cout << "CPF do Titular: " << conta.getCpf() << std::endl;
 	std::cout << "Conta do titular: " << conta.getNumeroConta() << std::endl;
+	std::cout << "O número de contas no sistema: " << conta.getQtdContas() << std::endl;
 
 }
 
 void getSaldoFinal(Conta& conta) {
 	std::cout << "Saldo de " << conta.getNome() << " é de : " << conta.getSaldo() << std::endl;
+}
+
+int Conta::getQtdContas() {
+	return qtd_contas;
+}
+void Conta::validaNameSize() {
+	if (nome_titular.size() < 5) {
+		exit(1);
+	}
 }
