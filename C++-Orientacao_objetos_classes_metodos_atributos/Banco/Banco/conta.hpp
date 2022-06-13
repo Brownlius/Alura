@@ -1,19 +1,26 @@
 #pragma once
 #include <string>
 
-
-
 class Conta {
-public:
+public: 
+
+	Conta(std::string nome_titular, std::string cpf_titular, std::string numero_conta, int idade_titular);
+	
 	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
-	float getSaldo();
-	void setNome(std::string nome);
-	std::string getNome();
-
+	static int getQtdContas();
+	float getSaldo() const;
+	int getIdade() const;
+	std::string getNome() const;
+	std::string getCPF() const;
+	std::string getNumeroConta() const;
+		
 private:
-	std::string numero_conta;
-	std::string cpf_titular;
+
+	static int qtdContas;
 	std::string nome_titular;
-	float saldo = 0;
+	std::string cpf_titular;
+	std::string numero_conta;
+	int idade_titular;
+	float saldo;
 };
