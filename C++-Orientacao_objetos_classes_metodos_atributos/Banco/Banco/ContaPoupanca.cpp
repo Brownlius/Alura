@@ -12,6 +12,7 @@ void ContaPoupanca::sacar(float valorASacar)
         std::cout << "Não pode sacar valor negativo" << std::endl;
         return;
     }
+    std::cout << "Método conta poupança" << std::endl;
 
     float tarifa = valorASacar * 0.03;
     float valorSaque = valorASacar + tarifa;
@@ -23,13 +24,4 @@ void ContaPoupanca::sacar(float valorASacar)
 
     saldo -= valorSaque;
 
-}
-void ContaPoupanca::depositar(float valorADepositar)
-{
-    if (valorADepositar < 0) {
-        std::cout << "Não pode sacar valor negativo" << std::endl;
-        return;
-    }
-
-    saldo += valorADepositar;
 }

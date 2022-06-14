@@ -6,11 +6,8 @@
 
 class Titular : public Pessoa
 {
-private:
-
 public:
     Titular(Cpf cpf, std::string nome);
 
-private:
 };
 

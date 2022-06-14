@@ -1,12 +1,2 @@
-﻿  Conta.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\ContaPoupanca.hpp(7,1): error C2504: 'Conta': classe base indefinida
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\Conta.cpp(27,18): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-  ContaPoupanca.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\ContaPoupanca.cpp(16,18): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-  Funcionario.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\ContaPoupanca.hpp(7,1): error C2504: 'Conta': classe base indefinida
-  main.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\ContaPoupanca.hpp(7,1): error C2504: 'Conta': classe base indefinida
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\main.cpp(29,29): error C2664: 'void ExibeSaldo(Conta &)': não é possível converter um argumento 1 de 'ContaPoupanca' em 'Conta &'
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\main.cpp(10,6): message : consulte a declaração de 'ExibeSaldo'
-  Gerando Código...
+﻿  main.cpp
+  Banco.vcxproj -> H:\Github\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\x64\Debug\Banco.exe
