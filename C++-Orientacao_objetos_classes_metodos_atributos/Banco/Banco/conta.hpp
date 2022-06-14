@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "Titular.hpp"
+#include "ContaPoupanca.hpp"
 
 class Conta
 {
@@ -13,6 +14,8 @@ public:
 private:
     std::string numero;
     Titular titular;
+
+protected:
     float saldo;
 
 public:

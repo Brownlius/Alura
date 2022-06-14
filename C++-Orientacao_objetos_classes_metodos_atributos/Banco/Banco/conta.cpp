@@ -3,6 +3,7 @@
 
 int Conta::numeroDeContas = 0;
 
+
 Conta::Conta(std::string numero, Titular titular):
     numero(numero), 
     titular(titular),
@@ -23,12 +24,15 @@ void Conta::sacar(float valorASacar)
         return;
     }
 
-    if (valorASacar > saldo) {
+    float tarifa = valorASacar * 0.05;
+    float valorSaque = valorASacar + tarifa;
+
+    if (valorSaque> saldo) {
         std::cout << "Saldo insuficiente" << std::endl;
         return;
     }
 
-    saldo -= valorASacar;
+    saldo -= valorSaque;
 }
 
 void Conta::depositar(float valorADepositar)
