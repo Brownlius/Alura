@@ -1,23 +1,33 @@
-#include "conta.hpp"
+#include <iostream>
+#include <string>
+#include "Conta.hpp"
+#include "Titular.hpp"
+#include "Cpf.hpp"
 
 using namespace std;
-	
-int main() {
 
+void ExibeSaldo(const Conta& conta)
+{
+    cout << "O saldo da conta é: " << conta.recuperaSaldo() << endl;
+}
 
-	Conta conta1("Nykole", "067.571.551-55", "1325-x");
-		getData(conta1);
-	
-		conta1.depositar(800);
-		conta1.sacar(300);
-		getSaldoFinal(conta1);
+int main()
+{
+    Titular titular(Cpf("123.456.789-10"), "Vinicius");
+    Conta umaConta("123456", titular);
+    umaConta.depositar(500);
+    umaConta.sacar(200);
 
-	Conta conta2("Pedro", "043.159.411-55", "6993-x");
-		getData(conta2);
+    ExibeSaldo(umaConta);
 
-		conta2.depositar(500);
-		conta2.sacar(200);
-		getSaldoFinal(conta2);
-	
-	return 0;
+    Titular outro(Cpf("098.765.432-10"), "Dias");
+    Conta umaOutraConta("654321", titular);
+    umaOutraConta.depositar(300);
+    umaOutraConta.sacar(50);
+
+    ExibeSaldo(umaOutraConta);
+
+    cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
+    return 0;
 }

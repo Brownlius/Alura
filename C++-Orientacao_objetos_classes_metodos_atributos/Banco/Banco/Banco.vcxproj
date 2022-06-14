@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{75044cc7-ecfc-4561-9c15-196b7f03d76a}</ProjectGuid>
+    <ProjectGuid>{728a202b-f724-4c95-95fb-fdc5d9d11419}</ProjectGuid>
     <RootNamespace>Banco</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="conta.cpp" />
+    <ClCompile Include="Conta.cpp" />
+    <ClCompile Include="Cpf.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Titular.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="conta.hpp" />
+    <ClInclude Include="Conta.hpp" />
+    <ClInclude Include="Cpf.hpp" />
+    <ClInclude Include="Titular.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
