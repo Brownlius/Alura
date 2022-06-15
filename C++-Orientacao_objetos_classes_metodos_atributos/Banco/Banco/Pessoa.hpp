@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "autenticos.hpp"
 #include <string>
 #include "Cpf.hpp"
 

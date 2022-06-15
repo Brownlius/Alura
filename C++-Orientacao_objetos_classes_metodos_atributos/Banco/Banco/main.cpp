@@ -2,6 +2,7 @@
 #include <string>
 #include "Conta.hpp"
 #include "ContaPoupanca.hpp"
+#include "ContaCorrente.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
@@ -18,9 +19,18 @@ void realizaSaque(Conta& conta, float valorASacar)
     conta.sacar(valorASacar);
 }
 
+void fazLogin(Autenticos& alguem, string senha) {
+    if (alguem.autentica(senha)) {
+        cout << "Login realizado com sucesso" << endl;
+    }
+    else {
+        cout << "Senha não confere" << endl;
+    }
+}
+
 int main()
 {
-    Titular titular(Cpf("098.765.432-10"), "Dias Pereirão");
+    Titular titular(Cpf("098.765.432-10"), "Dias Pereirão", "novaSenha");
 
     ContaPoupanca umaConta("654321", titular);
     umaConta.depositar(100);
@@ -28,11 +38,11 @@ int main()
 
     ExibeSaldo(umaConta);
 
-    Titular titular2(Cpf("098.765.432-10"), "Dias Antônio");
+    Titular titular2(Cpf("098.765.432-10"), "Dias Antônio", "outraNovaSenha");
 
-    Conta umaConta2("6543212", titular2);
+    ContaCorrente umaConta2("6543212", titular2);
     umaConta2.depositar(5000);
-    realizaSaque(umaConta2, 1000);
+    umaConta2.transferePara(umaConta, 50);
 
     ExibeSaldo(umaConta2);
 

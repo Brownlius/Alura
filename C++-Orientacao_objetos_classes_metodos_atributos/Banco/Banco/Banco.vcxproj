@@ -127,19 +127,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="autenticos.cpp" />
+    <ClCompile Include="Caixa.cpp" />
     <ClCompile Include="Conta.cpp" />
+    <ClCompile Include="ContaCorrente.cpp" />
     <ClCompile Include="ContaPoupanca.cpp" />
     <ClCompile Include="Cpf.cpp" />
     <ClCompile Include="Funcionario.cpp" />
+    <ClCompile Include="Gerente.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Titular.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="autenticos.hpp" />
+    <ClInclude Include="Caixa.hpp" />
     <ClInclude Include="Conta.hpp" />
+    <ClInclude Include="ContaCorrente.hpp" />
     <ClInclude Include="ContaPoupanca.hpp" />
     <ClInclude Include="Cpf.hpp" />
     <ClInclude Include="Funcionario.hpp" />
+    <ClInclude Include="Gerente.hpp" />
     <ClInclude Include="Pessoa.hpp" />
     <ClInclude Include="Titular.hpp" />
   </ItemGroup>
