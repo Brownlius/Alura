@@ -8,7 +8,7 @@ class Funcionario : public Pessoa
 {
 public:
 
-	Funcionario(Cpf cpf, std::string nome, float salario);
+	Funcionario(Cpf cpf, std::string nome, float salario, short int payDay);
 	std::string getNome();
 	virtual float bonificacao() const = 0;
 	float getSalario() const;
@@ -16,6 +16,6 @@ public:
 private:
 
 	float salario;
-	
+	short int payDay;	
 };
 

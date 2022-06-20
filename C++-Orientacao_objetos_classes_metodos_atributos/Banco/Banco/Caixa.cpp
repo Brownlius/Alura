@@ -1,6 +1,6 @@
 #include "Caixa.hpp"
 
-Caixa::Caixa(Cpf cpf, std::string nome, float salario) : Funcionario(cpf, nome, salario)
+Caixa::Caixa(Cpf cpf, std::string nome, float salario, short int payDay) : Funcionario(cpf, nome, salario, payDay)
 {
 
 }

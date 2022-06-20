@@ -1,7 +1,7 @@
 #include "Funcionario.hpp"
 
-Funcionario::Funcionario(Cpf cpf, std::string nome, float salario) :
-	Pessoa(cpf, nome), salario(salario)
+Funcionario::Funcionario(Cpf cpf, std::string nome, float salario, short int payDay) :
+	Pessoa(cpf, nome), salario(salario), payDay(payDay)
 {
 
 }

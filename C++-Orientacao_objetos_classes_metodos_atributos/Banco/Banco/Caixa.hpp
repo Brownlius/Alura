@@ -3,7 +3,7 @@
 class Caixa :
     public Funcionario
 {
-    Caixa(Cpf cpf, std::string nome, float salario);
+    Caixa(Cpf cpf, std::string nome, float salario, short int payDay);
     virtual float bonificacao() const override;
 };
 

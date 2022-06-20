@@ -5,7 +5,11 @@
 class Gerente :
     public Funcionario,public Autenticos
 {
-    Gerente(Cpf cpf, std::string nome, float salario, std::string senha);
+public:
+    Gerente(Cpf cpf, std::string nome, float salario, short int payDay, std::string senha);
     virtual float bonificacao() const override;
+
+private: 
+  
 };
 
