@@ -16,7 +16,11 @@ using namespace std;
 
 void realizaSaque(Conta& conta, float valorASacar)
 {
-    conta.sacar(valorASacar);
+    std::variant<Conta::resultadoSaque, float> resultado = conta.sacar(valorASacar);
+    if(auto saldo = std::get_if<float>(&resultado)) {
+        cout << "Novo saldo da conta: " << *saldo << endl;
+    }
+    
 }
 
 void fazLogin(Autenticos& alguem, string senha) {
@@ -26,6 +30,10 @@ void fazLogin(Autenticos& alguem, string senha) {
     else {
         cout << "Senha não confere" << endl;
     }
+}
+template<typename meuTipo>
+meuTipo& Menor(Conta& a, Conta& b) {
+    return a < b ? a : b;
 }
 
 ostream& operator<<(ostream& cout, const Conta& conta) {
@@ -39,22 +47,13 @@ ostream& operator<<(ostream& cout, const Conta& conta) {
 int main()
 {
     Titular titular(Cpf("098.765.432-10"), "Dias Pereirão", "novaSenha");
-
     ContaPoupanca umaConta("654321", titular);
-    umaConta.depositar(100);
-    realizaSaque(umaConta, 50);
-
-    cout << umaConta;
-
-    Titular titular2(Cpf("098.765.432-10"), "Dias Antônio", "outraNovaSenha");
-
+    umaConta.depositar(1100);
+    cout << "\n";
+    Titular titular2(Cpf("098.765.432-10"), "Antônio", "outraNovaSenha");
     ContaCorrente umaConta2("6543212", titular2);
-    (Conta&)umaConta2+= 5000;
-    //umaConta2.transferePara(umaConta, 50);
-    (ContaCorrente&)umaConta+= umaConta2;
+    umaConta2.depositar(1020);
+    cout << Menor(umaConta2, umaConta);
 
-    cout << umaConta2;
-
-    Gerente umGerente(Cpf("154.698.654-96"), "Alberto Roberto", 5400.36, diaDaSemana ::Terca, "senhaDoGerente");
     return 0;
 }

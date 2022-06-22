@@ -1,14 +1,2 @@
-﻿  Caixa.cpp
-H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Caixa.cpp(9,22): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
-  ContaCorrente.cpp
-H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\ContaCorrente.cpp(9,16): warning C4305: 'return': truncamento de 'double' para 'float'
-  ContaPoupanca.cpp
-H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\ContaPoupanca.cpp(11,16): warning C4305: 'return': truncamento de 'double' para 'float'
-  Funcionario.cpp
-  Gerente.cpp
-H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Gerente.cpp(10,22): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
-  conta.cpp
-  main.cpp
-H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(57,26): warning C4305: 'argumento': truncamento de 'double' para 'float'
-  Gerando Código...
-  Banco-4.vcxproj -> H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\x64\Debug\Banco-4.exe
+﻿  main.cpp
+  Banco-4.vcxproj -> C:\Users\infortech4\Documents\GitHub\Alura\C++-Enum_templates_e_mais\Banco-4\x64\Debug\Banco-4.exe
