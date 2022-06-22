@@ -5,7 +5,7 @@
 #include "Pessoa.hpp"
 #include "autenticos.hpp"
 
-class Titular : public Pessoa, public Autenticos
+class Titular : public Pessoa<Cpf>, public Autenticos
 {
 public:
     Titular(Cpf cpf, std::string nome, std::string senha);

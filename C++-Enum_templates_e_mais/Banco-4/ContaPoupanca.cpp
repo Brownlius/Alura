@@ -7,7 +7,4 @@ ContaPoupanca::ContaPoupanca(std::string numero, Titular titular) :
 }
 
 
-float ContaPoupanca::taxaSaque() const {
-    return 0.03;
-}
 

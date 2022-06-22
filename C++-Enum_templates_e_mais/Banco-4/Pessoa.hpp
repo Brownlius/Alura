@@ -2,22 +2,35 @@
 #include <iostream>
 #include "autenticos.hpp"
 #include <string>
-#include "Cpf.hpp"
+#include <iostream>
 
+template<typename Documentos>	
 class Pessoa
 {
 public:
-	std::string getNome();
-	Pessoa(Cpf cpf, std::string nome);
+	Pessoa(Documentos documento, std::string nome) : documento(documento), nome(nome)
+	{
+
+		verificaTamanhoDoNome();
+	}
+
+	std::string getNome() {
+		return nome;
+	}
 	
 protected:
 
-	Cpf cpf;
+	Documentos documento;
 	std::string nome;
 
 public:
 
 private:
-	void verificaTamanhoDoNome();
+	void verificaTamanhoDoNome() {
+		if (nome.size() < 5) {
+			std::cout << "Nome muito curto" << std::endl;
+			exit(1);
+		}
+	}
 };
 

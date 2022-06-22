@@ -32,7 +32,7 @@ void fazLogin(Autenticos& alguem, string senha) {
     }
 }
 template<typename meuTipo>
-meuTipo& Menor(Conta& a, Conta& b) {
+meuTipo Menor(meuTipo a, meuTipo b) {
     return a < b ? a : b;
 }
 
@@ -53,7 +53,7 @@ int main()
     Titular titular2(Cpf("098.765.432-10"), "Antônio", "outraNovaSenha");
     ContaCorrente umaConta2("6543212", titular2);
     umaConta2.depositar(1020);
-    cout << Menor(umaConta2, umaConta);
+    cout <<  Menor<Conta&>(umaConta2, umaConta);
 
     return 0;
 }

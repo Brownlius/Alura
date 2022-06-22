@@ -1,2 +1,29 @@
-﻿  main.cpp
-  Banco-4.vcxproj -> C:\Users\infortech4\Documents\GitHub\Alura\C++-Enum_templates_e_mais\Banco-4\x64\Debug\Banco-4.exe
+﻿  Caixa.cpp
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Caixa.cpp(9,22): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
+  ContaCorrente.cpp
+  ContaPoupanca.cpp
+  Funcionario.cpp
+  Gerente.cpp
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Gerente.cpp(10,22): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
+  main.cpp
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(17,31): error C2955: 'Conta': uso de classe modelo requer a lista de argumentos modelo
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(13): message : consulte a declaração de 'Conta'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(17,26): error C2955: 'Conta': uso de classe modelo requer a lista de argumentos modelo
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(13): message : consulte a declaração de 'Conta'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(19,25): error C2955: 'Conta': uso de classe modelo requer a lista de argumentos modelo
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(13): message : consulte a declaração de 'Conta'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(19,84): error C2514: 'std::variant<Conta<taxaSaque>::resultadoSaque,float>': não é possível construir o modelo de classe
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(45): message : consulte a declaração de 'std::variant<Conta<taxaSaque>::resultadoSaque,float>'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(39,54): error C2955: 'Conta': uso de classe modelo requer a lista de argumentos modelo
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(13): message : consulte a declaração de 'Conta'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(39,49): error C2955: 'Conta': uso de classe modelo requer a lista de argumentos modelo
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(13): message : consulte a declaração de 'Conta'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(56,26): error C2955: 'Conta': uso de classe modelo requer a lista de argumentos modelo
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\Conta.hpp(13): message : consulte a declaração de 'Conta'
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(56,47): error C2664: 'meuTipo &Menor<Conta&>(meuTipo,meuTipo)': não é possível converter um argumento 1 de 'ContaCorrente' em 'meuTipo'
+          with
+          [
+              meuTipo=Conta &
+          ]
+H:\Github\Alura\C++-Enum_templates_e_mais\Banco-4\main.cpp(35,9): message : consulte a declaração de 'Menor'
+  Gerando Código...

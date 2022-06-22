@@ -6,7 +6,7 @@
 #include "diaDaSemana.hpp"
 
 
-class Funcionario : public Pessoa
+class Funcionario : public Pessoa<Cpf>
 {
 public:
 
