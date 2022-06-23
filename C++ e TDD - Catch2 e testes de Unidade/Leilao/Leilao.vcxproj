@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Avaliador.cpp" />
     <ClCompile Include="Lance.cpp" />
     <ClCompile Include="Leilao.cpp" />
+    <ClCompile Include="Test.cpp" />
     <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Avaliador.hpp" />
+    <ClInclude Include="catch.hpp" />
     <ClInclude Include="Lance.hpp" />
     <ClInclude Include="Leilao.hpp" />
     <ClInclude Include="Usuario.hpp" />
