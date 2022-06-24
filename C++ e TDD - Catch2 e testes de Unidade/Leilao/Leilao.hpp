@@ -13,6 +13,7 @@ public:
     Leilao(std::string descricao);
     const std::vector<Lance>& recuperaLances() const;
     void recebeLance(const Lance& lance);
+    
 };
 
 #endif /* Leilao_hpp */
