@@ -129,8 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Avaliador.cpp" />
     <ClCompile Include="Lance.cpp" />
+    <ClCompile Include="leilao-test.cpp" />
     <ClCompile Include="Leilao.cpp" />
+    <ClCompile Include="main-test.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="usuario-test.cpp" />
     <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
   <ItemGroup>

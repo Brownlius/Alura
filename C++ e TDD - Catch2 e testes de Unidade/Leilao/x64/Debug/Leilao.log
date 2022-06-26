@@ -1,9 +1,2 @@
-﻿  Avaliador.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++ e TDD - Catch2 e testes de Unidade\Leilao\Avaliador.hpp(20,19): warning C4305: 'inicializando': truncamento de 'int' para 'float'
-  Lance.cpp
-  Leilao.cpp
-  Test.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++ e TDD - Catch2 e testes de Unidade\Leilao\Avaliador.hpp(20,19): warning C4305: 'inicializando': truncamento de 'int' para 'float'
-  Usuario.cpp
-  Gerando Código...
-  Leilao.vcxproj -> C:\Users\infortech4\Documents\GitHub\Alura\C++ e TDD - Catch2 e testes de Unidade\Leilao\x64\Debug\Leilao.exe
+﻿  usuario-test.cpp
+  Leilao.vcxproj -> H:\Github\Alura\C++ e TDD - Catch2 e testes de Unidade\Leilao\x64\Debug\Leilao.exe
