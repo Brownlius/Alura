@@ -1,7 +1,10 @@
 ﻿  Caixa.cpp
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\Caixa.cpp(9,15): warning C4552: '*': o resultado da expressão não é usado
+C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\Caixa.cpp(9,22): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
+  Funcionario.cpp
   Gerente.cpp
 C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\Gerente.cpp(10,22): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
+  main.cpp
+C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\main.cpp(47,25): warning C4305: 'argumento': truncamento de 'double' para 'float'
   Titular.cpp
   Gerando Código...
-C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\Banco\Caixa.cpp(10): error C4716: 'Caixa::bonificacao': deve retornar um valor
+  Banco.vcxproj -> C:\Users\infortech4\Documents\GitHub\Alura\C++-Orientacao_objetos_classes_metodos_atributos\Banco\x64\Debug\Banco.exe

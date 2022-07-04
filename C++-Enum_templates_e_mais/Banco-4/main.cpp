@@ -46,6 +46,7 @@ ostream& operator<<(ostream& cout, const Conta& conta) {
 
 int main()
 {
+    float pacatoTatu = 15.2;
     Titular titular(Cpf("098.765.432-10"), "Dias Pereirão", "novaSenha");
     ContaPoupanca umaConta("654321", titular);
     umaConta.depositar(1100);

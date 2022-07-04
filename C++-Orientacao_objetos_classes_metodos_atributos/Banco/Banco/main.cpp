@@ -8,7 +8,6 @@
 #include "Funcionario.hpp"
 #include "Gerente.hpp"
 #include "Caixa.hpp"
-#include "diaDaSemana.hpp"
 
 using namespace std;
 

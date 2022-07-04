@@ -5,7 +5,6 @@
 #include "Titular.hpp"
 #include <variant>
 
-int numeroDeContas = 0;
 
 template<int taxaSaque>
 
@@ -36,6 +35,7 @@ public:
     saldo(0)
     {
         numeroDeContas++;
+	    std::cout << "Conta Criada!" << std::endl;
     }
 
     ~Conta() {
@@ -43,10 +43,10 @@ public:
     }
 
     std::variant<resultadoSaque, float>sacar(float valorASacar){
-        std::cout << "Chamando método sacar da conta corrente" << std::endl;
+        std::cout << "Chamando mï¿½todo sacar da conta corrente" << std::endl;
 
-        if (valorASacar < 0) {
-            std::cout << "Não pode sacar valor negativo" << std::endl;
+        if (valorASacar < 0) {  
+            std::cout << "Nï¿½o pode sacar valor negativo" << std::endl;
             return valorNegativo;
         }
 
@@ -64,7 +64,7 @@ public:
 
     void depositar(float valorADepositar) {
         if (valorADepositar < 0) {
-            std::cout << "Não pode sacar valor negativo" << std::endl;
+            std::cout << "Nï¿½o pode sacar valor negativo" << std::endl;
             return;
         }
         saldo += valorADepositar;
