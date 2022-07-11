@@ -1,0 +1,15 @@
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\bin\Debug\net6.0\CSharp-Introducao.exe
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\bin\Debug\net6.0\CSharp-Introducao.deps.json
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\bin\Debug\net6.0\CSharp-Introducao.runtimeconfig.json
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\bin\Debug\net6.0\CSharp-Introducao.dll
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\bin\Debug\net6.0\CSharp-Introducao.pdb
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.csproj.AssemblyReference.cache
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.AssemblyInfoInputs.cache
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.AssemblyInfo.cs
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.csproj.CoreCompileInputs.cache
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.dll
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\refint\CSharp-Introducao.dll
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.pdb
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\CSharp-Introducao.genruntimeconfig.cache
+C:\Users\infortech4\Documents\GitHub\Alura\CSharp-Introducao\obj\Debug\net6.0\ref\CSharp-Introducao.dll
