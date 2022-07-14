@@ -1,0 +1,15 @@
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\bin\Debug\net6.0\BancoSharp.exe
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\bin\Debug\net6.0\BancoSharp.deps.json
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\bin\Debug\net6.0\BancoSharp.runtimeconfig.json
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\bin\Debug\net6.0\BancoSharp.dll
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\bin\Debug\net6.0\BancoSharp.pdb
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.csproj.AssemblyReference.cache
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.AssemblyInfoInputs.cache
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.AssemblyInfo.cs
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.csproj.CoreCompileInputs.cache
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.dll
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\refint\BancoSharp.dll
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.pdb
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\BancoSharp.genruntimeconfig.cache
+C:\Users\infortech4\Documents\GitHub\Alura\BancoSharp\BancoSharp\obj\Debug\net6.0\ref\BancoSharp.dll

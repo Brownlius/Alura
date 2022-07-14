@@ -1,22 +1,46 @@
 ﻿using BancoSharp;
+Console.WriteLine("\t---------------Wecolme to the club!---------------\n\n");
+
+
 
 CCorrente Conta1 = new CCorrente();
-Conta1.titular = "Pedro Almeida";
-Conta1.conta = "1699-x";
+Conta1.nome = "Frederico";
+Conta1.conta = "1699-X";
 Conta1.numeroAgencia = 25;
-Conta1.nomeAgencia = ""
+Conta1.nomeAgencia = "Banco central";
+Conta1.saldo = 1500;
 
-Console.WriteLine("Wecolme to the club!");
+CCorrente Conta2 = new CCorrente();
+Conta2.conta = "3654-X";
+Conta2.numeroAgencia = 25;
+Conta2.nomeAgencia = "Banco central";
+Conta2.saldo = 12500;
 
-Console.WriteLine("Titular :" + titular);
+Console.WriteLine(" Número conta: " + Conta1.conta);
+Console.WriteLine(" Agência: " + Conta1.numeroAgencia);
+Console.WriteLine(" Nome da Agência: " + Conta1.nomeAgencia);
+Console.WriteLine(" Saldo: " + Conta1.saldo);
 
-Console.WriteLine("Número conta :" + conta);
 
-Console.WriteLine("Agência :" + numeroAgencia);
+Conta1.Sacar(150);
+Console.WriteLine(" Saldo depois do saque: " + Conta1.saldo);
 
-Console.WriteLine("Nome da Agência :" + nomeAgencia);
+Conta2.Transferir(200, Conta1);
 
-Console.WriteLine("Saldo :" + saldo);
+Console.WriteLine(" Saldo da conta1 depois do tranferência: " + Conta1.saldo);
+Console.WriteLine(" Saldo da conta2 depois do tranferência: " + Conta2.saldo);
+
+Titular titular = new Titular();
+titular.nome = "Francisquinho";
+titular.cpf = "216.546.987-16";
+titular.profissao = "Contínuo";
+
+
+
+
+
+
+
 
 Console.ReadKey();
 
