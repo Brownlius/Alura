@@ -1,41 +1,51 @@
 ﻿using BancoSharp;
+using BancoSharp.Cliente;
+
 Console.WriteLine("\t---------------Wecolme to the club!---------------\n\n");
 
-
-
-CCorrente Conta1 = new CCorrente();
-Conta1.nome = "Frederico";
-Conta1.conta = "1699-X";
-Conta1.numeroAgencia = 25;
+CCorrente Conta1 = new CCorrente(154, "Banco do Centro");
+Conta1.Conta = "1699-X";
+Conta1.NumeroAgencia = 25;
 Conta1.nomeAgencia = "Banco central";
-Conta1.saldo = 1500;
+Conta1.Saldo = 1500;
 
-CCorrente Conta2 = new CCorrente();
-Conta2.conta = "3654-X";
-Conta2.numeroAgencia = 25;
+CCorrente Conta2 = new CCorrente(645, "Banco do Bairro");
+Conta2.Conta = "3654-X";
+Conta2.NumeroAgencia = 25;
 Conta2.nomeAgencia = "Banco central";
-Conta2.saldo = 12500;
+Conta2.Saldo = 1250;
 
-Console.WriteLine(" Número conta: " + Conta1.conta);
-Console.WriteLine(" Agência: " + Conta1.numeroAgencia);
+Console.WriteLine(" Número conta: " + Conta1.Conta);
+Console.WriteLine(" Agência: " + Conta1.NumeroAgencia);
 Console.WriteLine(" Nome da Agência: " + Conta1.nomeAgencia);
-Console.WriteLine(" Saldo: " + Conta1.saldo);
+Console.WriteLine(" Saldo: " + Conta1.Saldo);
 
 
 Conta1.Sacar(150);
-Console.WriteLine(" Saldo depois do saque: " + Conta1.saldo);
+Console.WriteLine(" Saldo depois do saque: " + Conta1.Saldo);
 
 Conta2.Transferir(200, Conta1);
 
-Console.WriteLine(" Saldo da conta1 depois do tranferência: " + Conta1.saldo);
-Console.WriteLine(" Saldo da conta2 depois do tranferência: " + Conta2.saldo);
+Console.WriteLine(" Saldo da conta1 depois do tranferência: " + Conta1.Saldo);
+Console.WriteLine(" Saldo da conta2 depois do tranferência: " + Conta2.Saldo);
 
 Titular titular = new Titular();
-titular.nome = "Francisquinho";
-titular.cpf = "216.546.987-16";
-titular.profissao = "Contínuo";
+titular.nome = "Antoninho";
+titular.profissao = "Marceneiro";
+titular.cpf = "04326485410";
 
 
+CCorrente conta3 = new CCorrente(365, "Banco da Perifa");
+conta3.Titular = titular;
+conta3.Conta = "156-xx";
+conta3.NumeroAgencia = 25;
+conta3.nomeAgencia = "Banco Central";
+
+Console.WriteLine(titular.nome);
+Console.WriteLine(conta3.Titular.nome);
+
+CCorrente conta4= new CCorrente(1643, "Banco do Interior");
+Console.WriteLine(Conta4);
 
 
 

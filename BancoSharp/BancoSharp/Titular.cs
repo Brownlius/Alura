@@ -8,10 +8,12 @@ namespace BancoSharp.Cliente
 {
     public class Titular
     {
+        public string nome { get; set; }
 
-        public string nome;
-        public string cpf;
-        public string profissao;
+        public string cpf { get; set; }
+
+        public string profissao { get; set; }
+
 
     }
 }
