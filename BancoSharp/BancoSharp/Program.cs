@@ -1,5 +1,6 @@
 ﻿using BancoSharp;
 using BancoSharp.Cliente;
+using BancoSharp.Funcionarios;
 
 Console.WriteLine("\t---------------Wecolme to the club!---------------\n\n");
 
@@ -44,14 +45,20 @@ conta3.nomeAgencia = "Banco Central";
 Console.WriteLine(titular.nome);
 Console.WriteLine(conta3.Titular.nome);
 
-CCorrente conta4= new CCorrente(1643, "Banco do Interior");
-Console.WriteLine();
+CCorrente conta4= new   (1643, "Banco do Interior");
+Console.WriteLine(CCorrente.ContaCriadas);
 
 
 
+Funcionario F0001 = new Funcionario("DIR");
+F0001.Nome = "Arnaldino";
+F0001.Cpf = "546987542510";
+F0001.Salario = 1000;
 
+Console.WriteLine("Salário do funcionário: " + F0001.Salario);
+Console.WriteLine("Bonificação do funcionário: " + F0001.GetBonificacao());
 
-
+    
 Console.ReadKey();
 
 

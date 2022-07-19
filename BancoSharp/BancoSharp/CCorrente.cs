@@ -15,6 +15,7 @@ namespace BancoSharp
         {
             numeroAgencia = NumeroAgencia;
             nomeAgencia = nomeAgencia;
+            ContaCriadas += 1;
         }
 
         public Titular Titular { get; set; }
@@ -84,7 +85,7 @@ namespace BancoSharp
             conta.depositar(valor);
         }
 
+        public static int ContaCriadas { get; set; }
         
-   
     }
 }
