@@ -1,18 +1,18 @@
 ﻿namespace BancoSharp.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Auxiliar : Funcionario
     {
-        public Diretor(string nome, string cpf) : base(nome, cpf, 5000)
+        public Auxiliar(string nome, string cpf) : base(nome, cpf, 3000)
         {
 
         }
         public override double GetBonificacao()
         {
-            return Salario * 0.5;
+            return Salario * 0.20;
         }
         protected override void AumentaSalario()
         {
-            this.Salario *= 1.15;
+            this.Salario *= 1.1;
         }
     }
 }

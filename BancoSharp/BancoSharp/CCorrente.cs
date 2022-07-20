@@ -13,8 +13,8 @@ namespace BancoSharp
     {
         public CCorrente(int numeroAgencia, string nomeAgencia)
         {
-            numeroAgencia = NumeroAgencia;
-            nomeAgencia = nomeAgencia;
+            NumeroAgencia = numeroAgencia;
+            NomeAgencia = nomeAgencia;
             ContaCriadas += 1;
         }
 
@@ -41,7 +41,7 @@ namespace BancoSharp
             }
         }
 
-        public string nomeAgencia { get; set; }
+        public string NomeAgencia { get; set; }
 
         private double _saldo;
         public double Saldo

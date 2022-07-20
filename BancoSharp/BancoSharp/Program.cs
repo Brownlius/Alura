@@ -1,79 +1,21 @@
-﻿using BancoSharp;
-using BancoSharp.Cliente;
-using BancoSharp.Funcionarios;
+﻿using BancoSharp.Funcionarios;
 
 Console.WriteLine("\t---------------Wecolme to the club!---------------\n\n");
 
-CCorrente Conta1 = new CCorrente(154, "Banco do Centro");
-Conta1.Conta = "1699-X";
-Conta1.NumeroAgencia = 25;
-Conta1.nomeAgencia = "Banco central";
-Conta1.Saldo = 1500;
+Funcionario F101 = new Diretor("Claudio", "056874125630");
 
-CCorrente Conta2 = new CCorrente(645, "Banco do Bairro");
-Conta2.Conta = "3654-X";
-Conta2.NumeroAgencia = 25;
-Conta2.nomeAgencia = "Banco central";
-Conta2.Saldo = 1250;
+Funcionario F201 = new GerenteContas("Antonio", "32654123520");
 
-Console.WriteLine(" Número conta: " + Conta1.Conta);
-Console.WriteLine(" Agência: " + Conta1.NumeroAgencia);
-Console.WriteLine(" Nome da Agência: " + Conta1.nomeAgencia);
-Console.WriteLine(" Saldo: " + Conta1.Saldo);
+Funcionario F301 = new Designer("Pedro", "043159412310");
+
+Funcionario F401 = new Desenvolvedor("Nykole", "32569847150");
+
+Funcionario F501 = new Auxiliar("Pexeira", "65423978450");
 
 
-Conta1.Sacar(150);
-Console.WriteLine(" Saldo depois do saque: " + Conta1.Saldo);
+F401.mostraInfosFuncionarios();
 
-Conta2.Transferir(200, Conta1);
-
-Console.WriteLine(" Saldo da conta1 depois do tranferência: " + Conta1.Saldo);
-Console.WriteLine(" Saldo da conta2 depois do tranferência: " + Conta2.Saldo);
-
-Titular titular = new Titular();
-titular.nome = "Antoninho";
-titular.profissao = "Marceneiro";
-titular.cpf = "04326485410";
-
-
-CCorrente conta3 = new CCorrente(365, "Banco da Perifa");
-conta3.Titular = titular;
-conta3.Conta = "156-xx";
-conta3.NumeroAgencia = 25;
-conta3.nomeAgencia = "Banco Central";
-
-Console.WriteLine(titular.nome);
-Console.WriteLine(conta3.Titular.nome);
-
-CCorrente conta4= new   (1643, "Banco do Interior");
-Console.WriteLine(CCorrente.ContaCriadas);
-
-
-
-Funcionario F0001 = new Funcionario("DIR");
-F0001.Nome = "Arnaldino";
-F0001.Cpf = "546987542510";
-F0001.Salario = 1000;
-
-Console.WriteLine("Salário do funcionário: " + F0001.Salario);
-Console.WriteLine("Bonificação do funcionário: " + F0001.GetBonificacao());
-
-    
 Console.ReadKey();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

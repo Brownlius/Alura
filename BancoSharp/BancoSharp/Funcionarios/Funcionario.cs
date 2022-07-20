@@ -1,37 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BancoSharp.Funcionarios
+﻿namespace BancoSharp.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
-        public Funcionario(string _tipoFuncionario)
+        public static int TotalFuncionarios { get; private set; }
+        public Funcionario(string nome, string cpf, double salario)
         {
-            this._tipoFuncionario = _tipoFuncionario;
+            Nome = nome;
+            Cpf = cpf;
+            Salario = salario;
+            TotalFuncionarios++;
+        }
+        public string Nome { get; protected set; }
+        public string Cpf { get; protected set; }
+        public double Salario { get; protected set; }
+        public abstract double GetBonificacao();
+        protected abstract void AumentaSalario();
+        public void mostraInfosFuncionarios()
+        {
+            Console.WriteLine(" Nome do Funcionário: " + Nome);
+            Console.WriteLine(" CPF: " + Cpf);
+            Console.WriteLine(" Salário: " + Salario);
         }
 
-        private string _tipoFuncionario;
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
-        
-        public double GetBonificacao()
-        {
-            switch (_tipoFuncionario) 
-            { 
-            case "DIR":
-                return Salario * 0.9;
 
-            case "CAI":
-                return Salario * 0.1;
-                        
-            case "GER":
-                return Salario * 0.3;
-            }
-            return 0;
-        }
+
+
     }
 }
