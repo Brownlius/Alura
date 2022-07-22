@@ -4,7 +4,7 @@ namespace BancoSharp.SistemaInterno
 {
     public class SistemaInterno
     {
-        public bool logar(Autenticavel funcionario, string login, string senha)
+        public bool logar(FuncionarioAutenticavel funcionario, string login, string senha)
         {
             bool autenticado = funcionario.Autenticar(login, senha);
             if (autenticado)

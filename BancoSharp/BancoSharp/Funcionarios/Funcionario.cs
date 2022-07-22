@@ -13,8 +13,7 @@
         public string Nome { get; protected set; }
         public string Cpf { get; protected set; }
         public double Salario { get; protected set; }
-        public string Login { get; protected set; }
-        public string Senha { set; get; }
+
         public abstract double GetBonificacao();
         protected abstract void AumentaSalario();
         public void mostraInfosFuncionarios()
@@ -23,16 +22,6 @@
             Console.WriteLine(" CPF: " + Cpf);
             Console.WriteLine(" Salário: " + Salario);
         }
-        
-        public bool Autenticar(string login, string senha)
-        {
-            if((Login == login) && (this.Senha == senha))
-            {
-                return true;
-            }
-            return false;
-        }
-
 
     }
 }

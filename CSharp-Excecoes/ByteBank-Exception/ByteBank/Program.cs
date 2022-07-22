@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BancoSharp.Utilitarios
+namespace ByteBank
 {
-    public class Bonificacao
+    class Program
     {
-        public double TotalBonificacao { get; set; }
+        static void Main(string[] args)
+        {
+            Console.ReadLine();
+        }
     }
 }

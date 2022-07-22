@@ -1,10 +1,9 @@
 ﻿namespace BancoSharp.Funcionarios
 {
-    public class Diretor : Autenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
-        public Diretor(string nome, string cpf, string login, string senha) : base(nome, cpf, 5000)
+        public Diretor(string nome, string cpf, string login, string senha) : base(nome, cpf, 5000, login, senha)
         {
-            Senha = senha;
         }
         public override double GetBonificacao()
         {
@@ -14,7 +13,6 @@
         {
             this.Salario *= 1.15;
         }
-
 
     }
 }
