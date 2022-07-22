@@ -6,6 +6,7 @@ namespace ByteBank
     {
         public Cliente Titular { get; set; }
 
+        public static double TaxaOperacao { get; private set; }
         public static int TotalDeContasCriadas { get; private set; }
 
 
@@ -52,6 +53,8 @@ namespace ByteBank
         {
             Agencia = agencia;
             Numero = numero;
+
+            TaxaOperacao = 30 / TotalDeContasCriadas;
 
             TotalDeContasCriadas++;
         }

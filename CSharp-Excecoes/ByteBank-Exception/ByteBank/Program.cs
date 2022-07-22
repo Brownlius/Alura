@@ -10,6 +10,10 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+            ContaCorrente conta1 = new ContaCorrente(7458, 654231);
+            Console.WriteLine(ContaCorrente.TaxaOperacao);
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+
             Console.ReadLine();
         }
     }

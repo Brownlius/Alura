@@ -8,6 +8,6 @@ namespace BancoSharp.Utilitarios
 {
     public interface Salarios
     {
-        public void CalculaSalarioTotal();
+        public void CalculaSalarioTotal();  
     }
 }
