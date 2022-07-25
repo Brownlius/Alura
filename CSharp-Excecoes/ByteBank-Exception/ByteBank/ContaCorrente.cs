@@ -48,17 +48,29 @@ namespace ByteBank
             }
         }
 
-
+       
+            
         public ContaCorrente(int agencia, int numero)
         {
             Agencia = agencia;
             Numero = numero;
 
-            TaxaOperacao = 30 / TotalDeContasCriadas;
+            
 
             TotalDeContasCriadas++;
         }
-
+        public double Divisao(double dividendo, double divisor)
+        {
+            try
+            {
+                return double divisao = dividendo / divisor;
+            }
+            catch (System.DivideByZeroException)
+            {
+                System.Console.WriteLine("Não é possível dividir por Zero.");
+                throw;
+            }
+        }
 
         public bool Sacar(double valor)
         {
