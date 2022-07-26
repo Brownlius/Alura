@@ -9,7 +9,6 @@ namespace ByteBank
         public static double TaxaOperacao { get; private set; }
         public static int TotalDeContasCriadas { get; private set; }
 
-
         private int _agencia;
         public int Agencia
         {
@@ -17,7 +16,7 @@ namespace ByteBank
             {
                 return _agencia;
             }
-            set
+            private set
             {
                 if (value <= 0)
                 {
@@ -27,7 +26,7 @@ namespace ByteBank
                 _agencia = value;
             }
         }
-        public int Numero { get; set; }
+        public int Numero { get; }
 
         private double _saldo = 100;
 
@@ -48,46 +47,34 @@ namespace ByteBank
             }
         }
 
-       
-            
         public ContaCorrente(int agencia, int numero)
         {
             Agencia = agencia;
             Numero = numero;
 
-            
-
-            TotalDeContasCriadas++;
-        }
-        public double Divisao(double dividendo, double divisor)
-        {
-            try
+            //TaxaOperacao = 30 / TotalDeContasCriadas;
+            if(agencia <= 0)
             {
-                return double divisao = dividendo / divisor;
+                throw new System.ArgumentException("A agência deve ser diferentes de 0", nameof(agencia));
             }
-            catch (System.DivideByZeroException)
+            if(numero <= 0)
             {
-                System.Console.WriteLine("Não é possível dividir por Zero.");
-                throw;
+                throw new System.ArgumentException("O número deve ser diferentes de 0", nameof(numero));
             }
         }
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
             if (_saldo < valor)
             {
-                return false;
+                throw new SaldoInsuficienteException("Saldo Insuficiente para sacar " + valor + " de conta");
             }
-
-            _saldo -= valor;
-            return true;
         }
 
         public void Depositar(double valor)
         {
             _saldo += valor;
         }
-
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
