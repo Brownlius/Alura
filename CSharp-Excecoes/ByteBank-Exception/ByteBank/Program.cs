@@ -9,21 +9,21 @@ namespace ByteBank
         {
             try
             {
-                ContaCorrente Conta1 = new ContaCorrente(1540, 320);
-                Conta1.Depositar(50);
-                Console.WriteLine(Conta1.Saldo);
-                Conta1.Sacar(500);
-                Console.WriteLine(Conta1.Saldo);
+                ContaCorrente conta1 = new ContaCorrente(4564, 789684);
+                ContaCorrente conta2 = new ContaCorrente(7891, 456794);
+
+                // conta1.Transferir(10000, conta2);
+                conta1.Sacar(10000);
             }
-            catch (ArgumentException Ex)
+            catch (OperacaoFinanceiraException e)
             {
-                Console.WriteLine("Erro no parâmetro: " + Ex.ParamName);
-                Console.WriteLine("Ocorreu um Argument Exception");
-                Console.WriteLine(Ex.Message);
-            }
-            catch (SaldoInsuficienteException Ex)
-            {
-                Console.WriteLine(Ex.Message);
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+
+                Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+
+                Console.WriteLine(e.InnerException.Message);
+                Console.WriteLine(e.InnerException.StackTrace);
             }
 
             try
