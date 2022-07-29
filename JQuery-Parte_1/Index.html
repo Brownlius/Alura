@@ -5,46 +5,10 @@
     </title>
     <head>
         <link rel = "stylesheet" href = "./reset.css">
+        <link rel = "stylesheet" href = "./style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <style type="text/css">
-
-            h1::selection{
-                background-color: aliceblue;
-            }
-            html{
-                font-family:monospace;
-            }
-            .titulo{
-                font-weight: bold;
-                padding: 5px;
-                font-size:4rem;
-                background-color:tomato;
-                border-bottom: 3px solid rgb(46, 56, 66);
-                text-align: center;
-            }
-            .container-main{
-                padding: 10px;
-            }
-            .frase{;
-                font-size:2rem;
-                margin-left:20px;
-                margin-bottom: 20px;
-            }
-            .infos{
-                text-align: center;
-                font-size:2rem;
-                line-height: 2.5rem;
-            }
-            .container-campo_digitacao{
-                margin: 0 auto;
-            }
-            .campo_digitacao{
-                display: block;
-                margin: 10px auto;
-                width: 90%;
-                height: 150px;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css" />
     </head>
     <header>
         <h1 class = 'titulo'>Almeida's Typer</h1> 
@@ -53,18 +17,28 @@
     <body class="container-corpo">
         <main class= "container-main">
             <div>
-                <p class ="frase">Lorem ipsum dolor sit elit. Sint eligendi labore, alias officia rem reprehenderit ut minima quasi temporibus, sequi illo aspernatur illum autem non eveniet nemo debitis at deleniti!</p>
+                <p class ="frase">Uma Palavra. Pera, 4.</p>
                 <ul class="infos"> 
-                    <li ><span class=class ="contador-palavras_frase"> 30 </span> palavras </li>
-                    <li> 10 segundo </li>
+                    <li 
+                    ><i class="material-icons icones">description</i>
+                    <span class= "contador_palavras-frase"> 0 </span> palavras </li>
+
+                    <li>
+                        <i class="material-icons icones">query_builder</i>
+                        <span class = "cronometro-frase">3</span> segundos </li>
                 </ul>
             </div>
+            
             <div class= 'container-campo_digitacao'>
                 <textarea class ="campo_digitacao"></textarea>
+                <div>
+                    <button class = "btn-reiniciar">Reiniciar</button>
+                </div>
                 <ul class="infos">
                     <li><span class ="contador_caracteres-campo_digitacao">0</span> caracteres</li>
                     <li><span class ="contador_palavras-campo_digitacao">0</span> palavras</li>
                 </ul>
+            
                 
             </div>
         </main>

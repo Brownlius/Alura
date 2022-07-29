@@ -1,0 +1,80 @@
+h1::selection{
+    background-color: aliceblue;
+}
+html{
+    font-family:monospace;
+}
+.titulo{
+    font-weight: bold;
+    padding: 5px;
+    font-size:4rem;
+    background-color:tomato;
+    border-bottom: 3px solid rgb(46, 56, 66);
+    text-align: center;
+}
+.container-main{
+    padding: 10px;
+}
+.frase{
+    font-size:2rem;
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+.infos{
+    text-align: center;
+    font-size:2rem;
+    line-height: 2.5rem;
+}
+.icones{
+    vertical-align: middle;
+}
+.container-campo_digitacao{
+    margin: 0 auto;
+}
+.campo_digitacao{
+    border: 3px solid rgb(46, 56, 66);
+    background-color: rgb(255, 237, 234);
+    border-radius: 3px;
+    padding:10px;
+    font-size: 1.5rem;
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: 150px;
+    transition: 0.2s;
+}
+.campo_digitacao:disabled{
+    border: 3px solid rgb(238, 225, 223);
+    opacity: 80%;
+    background-color: rgb(238, 225, 223);
+}
+.btn-reiniciar{
+    font-family:monospace;
+    margin-left: 60px;
+    background:tomato;
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: -1px 1px 2px rgb(46, 56, 66);
+    transition: 0.2s all;
+}
+
+.btn-reiniciar:active{
+    transform: scale(0.98);
+    border: 2px solid tomato;
+
+}
+.btn-reiniciar:disabled{
+    transform: scale(1);
+    border: 2px solid tomato;
+    text-decoration: line-through;
+}
+
+.borda-certa{
+    border: 3px solid lightgreen;
+}
+.borda-errada{
+    border: 3px solid tomato;
+
+}
