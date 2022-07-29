@@ -1,5 +1,8 @@
 h1::selection{
-    background-color: aliceblue;
+    background-color: rgb(255, 237, 234);
+}
+::selection{
+    background-color:tomato;
 }
 html{
     font-family:monospace;
@@ -29,26 +32,30 @@ html{
     vertical-align: middle;
 }
 .container-campo_digitacao{
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .campo_digitacao{
-    border: 3px solid rgb(46, 56, 66);
-    background-color: rgb(255, 237, 234);
+    border: 2px solid rgb(46, 56, 66);
+    background-color: rgb(238, 229, 229);
     border-radius: 3px;
     padding:10px;
+    margin: 10px 0;
     font-size: 1.5rem;
-    display: block;
-    margin: 10px auto;
-    width: 90%;
     height: 150px;
     transition: 0.2s;
 }
 .campo_digitacao:disabled{
     border: 3px solid rgb(238, 225, 223);
     opacity: 80%;
-    background-color: rgb(238, 225, 223);
+    background-color: rgb(250, 217, 212);
+}
+.campo_digitacao:focus{
+    outline: none;
+    background-color: white;
 }
 .btn-reiniciar{
+    border: 3px solid rgb(46, 56, 66);
     font-family:monospace;
     margin-left: 60px;
     background:tomato;

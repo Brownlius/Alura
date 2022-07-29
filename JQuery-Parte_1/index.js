@@ -1,6 +1,5 @@
 let tempoinicialCronometro = $('.cronometro-frase').text();
 let campoTexto = $('.campo_digitacao');
-let botaoReiniciar = $('.btn-reiniciar');
 
 $(function () { 
     contaPalavrasFrase();
@@ -10,16 +9,25 @@ $(function () {
     });
     campoTexto.one('input', cronometro);
     campoTexto.on('input', ConfereDigitacao);
-    botaoReiniciar.click(reiniciarCampos);
+    $(".btn-reiniciar").click(reiniciarCampos);
+
 });
 
-let frase = $('.frase').text();
-function ConfereDigitacao(){
-    let digitado = campoTexto.val();
-    let caracteresDigitados = frase.substr(0, digitado);
 
-    if(digitado == caracteresDigitados){
+function ConfereDigitacao(){
+
+    let frase = $('.frase').text();
+    let digitado = campoTexto.val();
+    let digitadoTamanho = digitado.length;
+    let fraseAComparar = frase.substr(0, digitadoTamanho);
+
+    console.log(fraseAComparar);
+    console.log(digitado);
+
+    if(digitado == fraseAComparar){
         campoTexto.addClass("borda-certa");
+    }else{
+        campoTexto.addClass("borda-errada");
     }
 
 }
@@ -81,18 +89,23 @@ function reiniciarCampos(){
     $(".contador_palavras-campo_digitacao").html(0);
     $(".contador_caracteres-campo_digitacao").html(0); 
     $('.cronometro-frase').text(tempoinicialCronometro);
-    
+}
 function cronometro(){
     let cronometroCampo = $('.cronometro-frase');
     let cronometroValor = $('.cronometro-frase').text();
-    console.log("Chamei");
+    $('.btn-reiniciar').attr('disabled', true);
+    
     var cronometroID = setInterval(function(){
+        
         cronometroValor--;
         cronometroCampo.html(cronometroValor);
+
          if(cronometroValor < 1){
             campoTexto.attr('disabled',true);
+            $('.btn-reiniciar').attr('disabled', false);
             clearInterval(cronometroID);
         }
     }, 1000);
 
 }
+
