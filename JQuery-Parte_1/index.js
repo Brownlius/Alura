@@ -24,6 +24,7 @@ function ConfereDigitacao(){
 
 }
 
+campoTexto.one('focus', cronometro);
 
 function contaPalavrasFrase(){
 
@@ -81,4 +82,17 @@ function reiniciarCampos(){
     $(".contador_caracteres-campo_digitacao").html(0); 
     $('.cronometro-frase').text(tempoinicialCronometro);
     
+function cronometro(){
+    let cronometroCampo = $('.cronometro-frase');
+    let cronometroValor = $('.cronometro-frase').text();
+    console.log("Chamei");
+    var cronometroID = setInterval(function(){
+        cronometroValor--;
+        cronometroCampo.html(cronometroValor);
+         if(cronometroValor < 1){
+            campoTexto.attr('disabled',true);
+            clearInterval(cronometroID);
+        }
+    }, 1000);
+
 }
