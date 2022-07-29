@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+    <title>
+        JQuery Pt1
+    </title>
+    <head>
+        <link rel = "stylesheet" href = "./reset.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style type="text/css">
+
+            h1::selection{
+                background-color: aliceblue;
+            }
+            html{
+                font-family:monospace;
+            }
+            .titulo{
+                font-weight: bold;
+                padding: 5px;
+                font-size:4rem;
+                background-color:tomato;
+                border-bottom: 3px solid rgb(46, 56, 66);
+                text-align: center;
+            }
+            .container-main{
+                padding: 10px;
+            }
+            .frase{;
+                font-size:2rem;
+                margin-left:20px;
+                margin-bottom: 20px;
+            }
+            .infos{
+                text-align: center;
+                font-size:2rem;
+                line-height: 2.5rem;
+            }
+            .container-campo_digitacao{
+                margin: 0 auto;
+            }
+            .campo_digitacao{
+                display: block;
+                margin: 10px auto;
+                width: 90%;
+                height: 150px;
+            }
+        </style>
+    </head>
+    <header>
+        <h1 class = 'titulo'>Almeida's Typer</h1> 
+    </header>
+
+    <body class="container-corpo">
+        <main class= "container-main">
+            <div>
+                <p class ="frase">Lorem ipsum dolor sit elit. Sint eligendi labore, alias officia rem reprehenderit ut minima quasi temporibus, sequi illo aspernatur illum autem non eveniet nemo debitis at deleniti!</p>
+                <ul class="infos"> 
+                    <li ><span class=class ="contador-palavras_frase"> 30 </span> palavras </li>
+                    <li> 10 segundo </li>
+                </ul>
+            </div>
+            <div class= 'container-campo_digitacao'>
+                <textarea class ="campo_digitacao"></textarea>
+                <ul class="infos">
+                    <li><span class ="contador_caracteres-campo_digitacao">0</span> caracteres</li>
+                    <li><span class ="contador_palavras-campo_digitacao">0</span> palavras</li>
+                </ul>
+                
+            </div>
+        </main>
+    </body>
+    <script src="./index.js"></script>
+</html>
