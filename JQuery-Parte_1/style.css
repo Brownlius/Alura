@@ -85,3 +85,30 @@ html{
     border: 3px solid tomato;
 
 }
+.container-tabela{
+    margin: 10px 0;
+    border-top: 3px solid  rgb(46, 56, 66);
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    font-size: 4rem;
+    text-align: center;
+    padding: 5px;
+}
+
+
+thead{
+    margin: 10px 0;
+    line-height: 4rem;
+    border-top: 1px solid  rgb(46, 56, 66);
+    border-bottom: 1px solid  rgb(46, 56, 66);
+    font-size: 3rem;
+    text-align: center;
+    margin: 15px;
+}
+tbody{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center; 
+}

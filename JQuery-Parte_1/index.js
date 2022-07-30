@@ -13,26 +13,19 @@ $(function () {
 
 });
 
-
 function ConfereDigitacao(){
-
     let frase = $('.frase').text();
     let digitado = campoTexto.val();
-    let digitadoTamanho = digitado.length;
-    let fraseAComparar = frase.substr(0, digitadoTamanho);
-
-    console.log(fraseAComparar);
-    console.log(digitado);
+    let fraseAComparar = frase.substr(0, digitado.length);
 
     if(digitado == fraseAComparar){
         campoTexto.addClass("borda-certa");
+        campoTexto.removeClass("borda-errada");
     }else{
         campoTexto.addClass("borda-errada");
+        campoTexto.removeClass("borda-certa");
     }
-
 }
-
-campoTexto.one('focus', cronometro);
 
 function contaPalavrasFrase(){
 
@@ -41,7 +34,6 @@ function contaPalavrasFrase(){
     let qtdPalavras = frasedividida.length - 1;
     mudaContadorPalavrasFrase(qtdPalavras);
 }
-
     function mudaContadorPalavrasFrase(qtdPalavras){
 
         $('.contador_palavras-frase').text(qtdPalavras);
@@ -57,8 +49,8 @@ function contaPalavrasInput(){
 
         $(".contador_palavras-campo_digitacao").html(qtdPalavras);
     }
-function contaCaracteresInput(){
 
+function contaCaracteresInput(){
     let conteudoCampoTexto = campoTexto.val();
     qtdCaracteresCampoTexto = conteudoCampoTexto.length;
     mudaContadorCaracteresInput(qtdCaracteresCampoTexto);
@@ -72,6 +64,7 @@ function cronometro(){
     let cronometroCampo = $('.cronometro-frase');
     let cronometroValor = $('.cronometro-frase').text();
     $(".btn-reiniciar").attr("disabled",true)
+    
     var cronometroID = setInterval(function(){
         cronometroValor--;
         cronometroCampo.html(cronometroValor);
@@ -89,7 +82,10 @@ function reiniciarCampos(){
     $(".contador_palavras-campo_digitacao").html(0);
     $(".contador_caracteres-campo_digitacao").html(0); 
     $('.cronometro-frase').text(tempoinicialCronometro);
+    campoTexto.removeClass("borda-certa");
+    campoTexto.removeClass("borda-errada")
 }
+
 function cronometro(){
     let cronometroCampo = $('.cronometro-frase');
     let cronometroValor = $('.cronometro-frase').text();
@@ -104,8 +100,15 @@ function cronometro(){
             campoTexto.attr('disabled',true);
             $('.btn-reiniciar').attr('disabled', false);
             clearInterval(cronometroID);
+            inserePlacar();
         }
     }, 1000);
 
 }
 
+function inserePlacar(){
+    var user = "Pedro";
+    let palavrasPlacar = $('contador_palavras-campo_digitacao').text();
+    let corpoTabela = $('.tabela').find('tbody');
+    $('.nome-tabela').html(palavrasPlacar);
+}

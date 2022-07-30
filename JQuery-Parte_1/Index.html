@@ -6,9 +6,7 @@
     <head>
         <link rel = "stylesheet" href = "./reset.css">
         <link rel = "stylesheet" href = "./style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/materialize.min.css" />
     </head>
     <header>
         <h1 class = 'titulo'>Almeida's Typer</h1> 
@@ -25,7 +23,7 @@
                     </li>
                     <li>
                         <i class="material-icons icones">query_builder</i>
-                        <span class = "cronometro-frase">30</span> segundos 
+                        <span class = "cronometro-frase">10</span> segundos 
                     </li>
                 </ul>
             </div>
@@ -36,10 +34,33 @@
             </div>
             <div>
                 <ul class="infos">
-                    <li><span class ="contador_caracteres-campo_digitacao">0</span> caracteres</li>
-                    <li><span class ="contador_palavras-campo_digitacao">0</span> palavras</li>
+                    <li>
+                        <span class ="contador_caracteres-campo_digitacao">0</span> caracteres
+                    </li>
+                    <li>
+                        <span class ="contador_palavras-campo_digitacao">0</span> palavras
+                    </li>
                 </ul>
             </div>
+            <section>
+                <div class= "container-tabela">
+                    <h2>Placar</h2>
+                    <table class = "tabela">
+                        <thead>
+                            <tr>
+                                <th class = "nome-tabela">Nome</th>
+                                <th>Nº de palavras</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Pedro</th>
+                                <th>15</th>
+                            <tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </main>
     </body>
     <script src="./index.js"></script>
