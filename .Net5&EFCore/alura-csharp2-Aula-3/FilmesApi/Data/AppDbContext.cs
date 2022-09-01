@@ -10,12 +10,14 @@ namespace FilmesApi.Data
         {
 
         }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Endereco>()
                 .HasOne(endereco => endereco.Cinema)
                 .WithOne(cinema => cinema.Endereco)
-                .HasForeignKey<Cinema>(Cinema => Cinema.EnderecoId);
+                .HasForeignKey<Cinema>(cinema => cinema.EnderecoId);
+
             builder.Entity<Cinema>()
                 .HasOne(cinema => cinema.Gerente)
                 .WithMany(gerente => gerente.Cinemas)

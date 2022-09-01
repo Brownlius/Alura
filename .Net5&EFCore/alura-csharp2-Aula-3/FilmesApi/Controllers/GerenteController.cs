@@ -17,36 +17,36 @@ namespace FilmesApi.Controllers
         private AppDbContext _context;
         private IMapper _mapper;
 
-
         public GerenteController(AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
-
         }
+
         [HttpPost]
-        public IActionResult AddGerente(CreateGerenteDto dto)
+        public IActionResult AdicionaGerente(CreateGerenteDto dto)
         {
             Gerente gerente = _mapper.Map<Gerente>(dto);
             _context.Gerentes.Add(gerente);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(GetGerenteById), new { Id = gerente.Id }, gerente);
+            return CreatedAtAction(nameof(RecuperaGerentesPorId), new { Id = gerente.Id }, gerente);
         }
-        [HttpGet("{Id}")]
-        public IActionResult GetGerenteById(int Id)
-        {
-                Gerente gerente= _context.Gerentes.FirstOrDefault(gerente => gerente.Id == Id);
-                if (gerente != null)
-                {
-                    ReadGerenteDto gerenteDto = _mapper.Map<ReadGerenteDto>(gerente);
 
-                    return Ok(gerenteDto);
-                }
-                return NotFound();
-            
+        [HttpGet("{id}")]
+        public IActionResult RecuperaGerentesPorId(int id)
+        {
+            Gerente gerente = _context.Gerentes.FirstOrDefault(gerente => gerente.Id == id);
+            if (gerente != null)
+            {
+                ReadGerenteDto gerenteDto = _mapper.Map<ReadGerenteDto>(gerente);
+
+                return Ok(gerenteDto);
+            }
+            return NotFound();
         }
+
         [HttpDelete("{id}")]
-        public IActionResult DeletaFilme(int id)
+        public IActionResult DeletaGerente(int id)
         {
             Gerente gerente = _context.Gerentes.FirstOrDefault(gerente => gerente.Id == id);
             if (gerente == null)

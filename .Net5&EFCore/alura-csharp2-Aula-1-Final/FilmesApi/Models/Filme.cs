@@ -18,5 +18,6 @@ namespace FilmesAPI.Models
         public string Diretor { get; set; }
         public string Genero { get; set; }
         public int ClassificacaoEtaria { get; set; }
+        public virtual List<Cinema> Cinemas { get; set; }
     }
 }
