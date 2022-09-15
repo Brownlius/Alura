@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>077740a6-43d7-47c4-af6c-74d45b8e70b4</UserSecretsId>
+    <UserSecretsId>44dccf12-912f-47bf-8b55-b8da888ee00f</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,5 +22,7 @@
     </PackageReference>
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.0" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
