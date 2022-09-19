@@ -384,8 +384,25 @@ template {
 
 :root {
   --preto: rgb(14, 7, 7);
-  --vermelho: rgb(250, 40, 20);
+  --vermelho: rgb(238, 72, 57);
   --marron: rgb(91, 52, 44);
   --verde: rgb(155, 223, 139);
-  --branco_navajo: rgb(252, 219, 156);
+  --branco_navajo: rgb(243, 235, 219);
+}
+::selection{
+  background-color: var(--verde);
+}
+button {
+  transition: 0.5s all;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.98);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }

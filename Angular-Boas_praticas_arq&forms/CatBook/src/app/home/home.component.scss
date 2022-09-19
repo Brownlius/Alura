@@ -6,12 +6,12 @@
 .inicio__esq {
   display: flex;
   width: 35vw;
-  background-color: var(--branco_navajo);
+  background-color: rgb(241, 238, 233);
 }
 
 .imgInicio {
   margin: auto;
-  object-fit: contain;
+  object-fit: scale-down;
   width: 30vw;
 }
 
