@@ -1,22 +1,20 @@
 .container {
   display: flex;
-  height: 100vh;
   justify-content: flex-start;
 }
+
 .inicio__esq {
   display: flex;
-  background-image: linear-gradient(#040001, #2C0006);
-  width: 50vw;
+  width: 35vw;
+  background-color: var(--branco_navajo);
 }
+
 .imgInicio {
   margin: auto;
-  width: 40vw;
-  height: 50vh;
-  border: 2px solid #54B1C2;
-  border-radius: 5px;
-  box-shadow: -5px 5px 4px #00d9ff;
+  object-fit: contain;
+  width: 30vw;
 }
+
 .inicio__dir {
-  width: 50vw;
-  text-align: center;
+  width: 65vw;
 }
