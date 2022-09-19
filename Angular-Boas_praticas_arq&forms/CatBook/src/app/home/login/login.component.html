@@ -1,23 +1,30 @@
 <section class="container_section">
   <form class="formulario" (ngsubmit)="login()">
-    <h2 class="titulo__ login">Login</h2>
+    <h2 class="titulo__ login">Conecte-se</h2>
     <div class="campo__ usuario">
-      <input
-        class="input usuario"
-        placeholder="Nome do usuário"
-        [(ngModel)]="usuario"
-        name="usuario"
-      />
+      <span class="cat_icon"></span>
+      <input class="input__ usuario" placeholder="Nome do usuário" [(ngModel)]="usuario" name="usuario" />
     </div>
     <div class="campo__ senha">
-      <input
-        class="input senha"
-        type="password"
-        placeholder="Senha do usuário"
-        [(ngModel)]="senha"
-        name="senha"
-      />
+      <input class="input__ senha" type="password" placeholder="Senha do usuário" [(ngModel)]="senha" name="senha" />
     </div>
-    <button type="submit" class="botao">Fazer login</button>
+    <button type="submit" class="botao__ login">Fazer login</button>
+    <a class="forgot_password">Esqueceu sua senha?</a>
   </form>
+  <div class="separador">OU</div>
+  <div class="loginPorApi">
+    <button class="botao__ Api">
+      <img src="../../../assets/icons/facebook_icon.svg" />
+      <p>Conectar com o Facebook</p>
+    </button>
+    <button class="botao__ Api">
+      <p>Conectar com o Google</p>
+      <img src="../../../assets/icons/google_icon.svg" />
+    </button>
+  </div>
+  <div class="separador baixo"></div>
+  <div class="container_novaConta">
+    <p>Ainda não tem uma conta?</p>
+    <button type="submit" class="botao__ novaConta">Cadastre-se</button>
+  </div>
 </section>

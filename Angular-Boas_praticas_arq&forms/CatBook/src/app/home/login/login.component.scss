@@ -1,51 +1,129 @@
 .container_section {
-  display: flex;
-  background-color: rgb(241, 238, 233);
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid black;
 }
+
 .titulo__ {
-  text-transform: uppercase;
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .campo__ {
-  width: 90%;
+    display: flex;
+    width: 90%;
 }
-.input {
-  width: 90%;
-  background: rgb(243, 240, 240);
-  border: none;
-  border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
-  font-size: 1.5rem;
+
+.input__ {
+    width: 90%;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 15px;
+    padding-left: 3.5rem;
+    font-size: 1.5rem;
+
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 3rem;
+}
+
+.input__.usuario {
+    background-image: url("../../../assets/icons/catProfile_icon.png");
+}
+
+.input__.senha {
+    background-image: url("../../../assets/icons/password_icon.png");
 }
 
 .input:focus {
-  outline: 2px solid var(--preto);
-  background-color: rgb(255, 203, 203);
-}
-.input:visited {
-  border: none;
+    outline: 2px solid var(--preto);
 }
 
-.botao {
-  width: 50%;
-  padding: 8px;
-  font-size: 2rem;
-  background-color: var(--verde);
-  border: none;
-  border-radius: 4px;
+.input:visited {
+    border: none;
 }
-.botao:hover {
-  background-color: var(--vermelho);
-  color: var(--branco_navajo);
+
+.botao__ {
+    width: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    background-color: var(--verde);
+    border: none;
+    border-radius: 4px;
 }
+
+.botao__:hover {
+    color: var(--branco_navajo);
+    filter: brightness(95%)
+}
+
+.forgot_password {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: rgb(96, 150, 84);
+}
+
+.separador {
+    margin: 0 auto;
+    padding: 20px;
+    width: 65%;
+    height: 20px;
+    border-top: 1px solid var(--preto);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.separador.baixo {
+    border-top: none;
+    border-bottom: 1px solid var(--preto);
+}
+
+.container_novaConta {
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.botao__.novaConta {
+
+    background-color: var(--azul);
+}
+
+.loginPorApi {
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.botao__.Api {
+    display: flex;
+    width: 40%;
+    font-size: 1.3rem;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.botao__.Api:hover {
+    color: var(--preto);
+}
+
+.loginPorApi p {
+    padding: 0 20px;
+    margin-bottom: 0px;
+}
+
+.cat_icon {}

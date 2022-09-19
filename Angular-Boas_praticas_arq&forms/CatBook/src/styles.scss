@@ -388,6 +388,7 @@ template {
   --marron: rgb(91, 52, 44);
   --verde: rgb(155, 223, 139);
   --branco_navajo: rgb(243, 235, 219);
+  --azul:rgb(81, 190, 223);
 }
 ::selection{
   background-color: var(--verde);
@@ -406,3 +407,6 @@ textarea:focus,
 select:focus {
   outline: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
