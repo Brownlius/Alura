@@ -1,0 +1,101 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 10px;
+  width: 75vw;
+  border-radius: 5px;
+  font-family: "Typography";
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.formulario-container {
+  display: flex;
+  width: 90%;
+  background-color: rgb(193, 165, 247, 0.8);
+  border-radius: 5px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  font-size: 1.1rem;
+}
+.label {
+  display: flex;
+  margin: 10px;
+}
+
+.input {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 254, 240);
+}
+.container-radio {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+.container-radio label {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: nowrap;
+}
+
+.modelo {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 254, 240);
+  border-radius: 5px;
+  max-width: 250px;
+  margin: 1rem 0;
+}
+.conteudo_modelo {
+  padding: 0 15px;
+  word-wrap: break-word;
+}
+.modelo1 {
+  border-radius: 20%;
+  border: 2px dotted var(--roxo);
+}
+.modelo2 {
+  border-radius: 0;
+  border-right: 4px solid rgb(130, 255, 228);
+  border-bottom: 4px solid rgb(130, 255, 228);
+}
+.modelo3 {
+  border: 4px double rgb(73, 167, 255);
+}
+.aspas {
+  width: 30%;
+}
+.container_aspas.direita {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conteudo_modelo p {
+  padding: 15px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.botao {
+  font-size: 1.5rem;
+  width: 20vw;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.botao.salvar {
+  background-color: var(--verde);
+}
+.botao.cancelar {
+  background-color: var(--vermelho);
+}

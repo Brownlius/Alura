@@ -1,0 +1,117 @@
+<section class="main-container">
+  <header class="titulo-container">Adicione um novo pensamento</header>
+  <form class="formulario-container">
+    <label form="pensamento" class="label">Pensamento</label>
+    <input
+      type="textarea"
+      class="input"
+      name="pensamento"
+      placeholder="Digite um pensamento"
+      [(ngModel)]="pensamento.conteudo"
+    />
+    <label form="pensamento" class="label">Autoria ou fonte</label>
+    <input
+      type="textarea"
+      class="input"
+      name="Autoria"
+      placeholder="Digite a autoria e fonte"
+      [(ngModel)]="pensamento.autoria"
+    />
+    <label class="label">Selecione o modelo do card :</label>
+    <div class="container-radio">
+      <div class="radios">
+        <label for="modelo1">
+          <input
+            type="radio"
+            id="modelo1"
+            value="modelo1"
+            name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
+          />
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 1</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo1">
+          <img
+            class="aspas amarelas"
+            src="../../../../assets/imagens/aspas/modelo1.png"
+          />
+          <div class="conteudo_modelo">
+            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="autoria">
+              <b>{{ pensamento.autoria }}</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="radios">
+        <label for="modelo2">
+          <input
+            type="radio"
+            id="modelo2"
+            value="modelo2"
+            name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
+          />
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 2</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo2">
+          <img
+            class="aspas verde"
+            src="../../../../assets/imagens/aspas/modelo2.png"
+          />
+          <div class="conteudo_modelo">
+            <div class="container_aspas esquerda">
+              <p class="conteudo">{{ pensamento.conteudo }}</p>
+              <p class="autoria">{{ pensamento.autoria }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="radios">
+        <label for="modelo3">
+          <input
+            type="radio"
+            id="modelo3"
+            value="modelo3"
+            name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
+          />
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 3</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo3">
+          <div class="container_aspas direita">
+            <img
+              class="aspas azul"
+              src="../../../../assets/imagens/aspas/modelo3.png"
+            />
+          </div>
+          <div class="conteudo_modelo">
+            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="autoria">
+              <b>{{ pensamento.autoria }}</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="botoes">
+      <button (click)="CriarPensamento()" class="botao salvar">Salvar</button>
+      <button routerLink="/listaPensamento" class="botao cancelar">
+        cancelar
+      </button>
+    </div>
+  </form>
+</section>
+  

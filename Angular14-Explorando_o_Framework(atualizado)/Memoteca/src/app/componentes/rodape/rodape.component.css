@@ -1,0 +1,15 @@
+.rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(193, 165, 247);
+  color: rgb(255, 254, 240);
+
+}
+.copyrights i {
+  font-size: 1.2rem;
+  color: rgb(235, 191, 97);
+}
+.imagem_rodape {
+  width: 5%;
+}

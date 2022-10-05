@@ -1,0 +1,18 @@
+<section class="container">
+  <header class="header">
+    <h2>Meu mural</h2>
+    <button routerLink="/criarPensamento" class="botao">
+      Adicionar pensamento
+    </button>
+  </header>
+  <div class="mural" *ngIf="listaPensamentos.length > 0; else semPensamentos">
+    <div *ngFor="let pensamento of listaPensamentos">
+      <app-pensamento [pensamento]="pensamento"></app-pensamento>
+    </div>
+  </div>
+</section>
+<ng-template #semPensamentos>
+  <div class="semPensamentos">
+    <h1>Não há nenhum pensamento ainda!</h1>
+  </div>
+</ng-template>

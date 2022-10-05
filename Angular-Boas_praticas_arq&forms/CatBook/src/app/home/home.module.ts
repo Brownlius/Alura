@@ -4,7 +4,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
     CommonModule,
     HomeRoutingModule,
     FormsModule,
-    MatIconModule,
-    
+
   ],
   exports: [
     HomeComponent

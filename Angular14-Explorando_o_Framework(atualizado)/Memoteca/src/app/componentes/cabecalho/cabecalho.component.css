@@ -1,0 +1,40 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: rgb(193, 165, 247);
+}
+.cabecalho_esq {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.cabecalho_esq p {
+  font-family: "Typography";
+  font-size: 1.7rem;
+  color: rgb(255, 254, 240);
+}
+
+.cabecalho_esq__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Memoteca";
+  font-size: 4rem;
+  color: rgb(235, 191, 97);
+}
+.cabecalho_esq__logo em {
+  color: rgb(75, 158, 154);
+}
+
+.imagemIdeia_cabelho_esq {
+  width: 15%;
+}
+.cabecalho_dir {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+.imagem__cabecalho_dir {
+  width: 50%;
+}
