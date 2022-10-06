@@ -24,7 +24,7 @@
 }
 .mural{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   width: 90vw;
   flex-direction: row;

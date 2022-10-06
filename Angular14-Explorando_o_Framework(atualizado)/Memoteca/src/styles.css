@@ -135,11 +135,11 @@ table {
 }
 
 @font-face {
-  font-family: "Typography";
-  src: url(./assets/fonts/Typography.otf);
+  font-family: "MonoTeca";
+  src: url(./assets/fonts/monof56.ttf);
 }
 * {
-  font-family: "Typography";
+  font-family: "MonoTeca";
 
   --verde: rgb(75, 158, 154);
   --roxo: rgb(193, 165, 247);

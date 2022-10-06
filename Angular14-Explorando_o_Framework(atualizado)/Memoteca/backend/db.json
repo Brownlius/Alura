@@ -1,22 +1,16 @@
 {
-  "pensamentos":[
+  "pensamentos": [
     {
-      "id" : 1,
-      "conteudo" : "Carambolas",
-      "autoria" : "Pirula",
-      "modelo" : "modelo1"
+      "conteudo": "Foda ne nego",
+      "autoria": "Tornado brabo",
+      "modelo": "modelo2",
+      "id": 1
     },
     {
-      "id" : 2,
-      "conteudo" : "Carambolas",
-      "autoria" : "Pirula",
-      "modelo" : "modelo3"
-    },
-    {
-      "id" : 3,
-      "conteudo" : "Carambolas",
-      "autoria" : "Pirula",
-      "modelo" : "modelo2"
+      "conteudo": "",
+      "autoria": "",
+      "modelo": "modelo1",
+      "id": 3
     }
   ]
 }
