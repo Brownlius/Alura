@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { AddPensamentosComponent } from './componentes/pensamento/add-pensamentos/add-pensamentos.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaPensamentosComponent } from './componentes/pensamento/lista-pensamentos/lista-pensamentos.component';
 import { Routes } from '@angular/router';
 import { PensamentoComponent } from './componentes/pensamento/pensamento/pensamento.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExcluirPensamentoComponent } from './componentes/pensamento/excluir-pensamento/excluir-pensamento.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ExcluirPensamentoComponent } from './componentes/pensamento/excluir-pen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

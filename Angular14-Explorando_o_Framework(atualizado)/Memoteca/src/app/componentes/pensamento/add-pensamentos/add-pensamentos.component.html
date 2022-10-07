@@ -1,22 +1,41 @@
 <section class="main-container">
   <header class="titulo-container">Adicione um novo pensamento</header>
-  <form class="formulario-container">
+  <form [formGroup]="formulario" class="formulario-container">
     <label form="pensamento" class="label">Pensamento</label>
     <input
       type="textarea"
       class="input"
-      name="pensamento"
+      formControlName="conteudo"
       placeholder="Digite um pensamento"
-      [(ngModel)]="pensamento.conteudo"
     />
+    <div
+      class="input__erros"
+      *ngIf="formulario.get('conteudo')?.errors?.['required']
+      && formulario.get('autoria')?.touched"
+    >
+      O conteúdo é obrigatório!
+    </div>
     <label form="pensamento" class="label">Autoria ou fonte</label>
     <input
       type="textarea"
       class="input"
-      name="Autoria"
+      formControlName="autoria"
       placeholder="Digite a autoria e fonte"
-      [(ngModel)]="pensamento.autoria"
     />
+    <div
+      class="input__erros"
+      *ngIf="formulario.get('autoria')?.errors?.['required']
+      && formulario.get('autoria')?.touched"
+    >
+      A autoria é obrigatória!
+    </div>
+    <div
+      class="input__erros"
+      *ngIf="formulario.get('autoria')?.errors?.['minlength']
+       && formulario.get('autoria')?.touched"
+    >
+      A autoria deve ter no mínimo 3 caracteres!
+    </div>
     <label class="label">Selecione o modelo do card :</label>
     <div class="container-radio">
       <div class="radios">
@@ -25,8 +44,7 @@
             type="radio"
             id="modelo1"
             value="modelo1"
-            name="modelo-card"
-            [(ngModel)]="pensamento.modelo"
+            formControlName="modelo"
           />
           <div class="custom-radio">
             <span></span>
@@ -40,9 +58,9 @@
             src="../../../../assets/imagens/aspas/modelo1.png"
           />
           <div class="conteudo_modelo">
-            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="conteudo">{{ formulario.get("conteudo")?.value }}</p>
             <p class="autoria">
-              <b>{{ pensamento.autoria }}</b>
+              <b>{{ formulario.get("autoria")?.value }}</b>
             </p>
           </div>
         </div>
@@ -53,8 +71,7 @@
             type="radio"
             id="modelo2"
             value="modelo2"
-            name="modelo-card"
-            [(ngModel)]="pensamento.modelo"
+            formControlName="modelo"
           />
           <div class="custom-radio">
             <span></span>
@@ -69,8 +86,8 @@
           />
           <div class="conteudo_modelo">
             <div class="container_aspas esquerda">
-              <p class="conteudo">{{ pensamento.conteudo }}</p>
-              <p class="autoria">{{ pensamento.autoria }}</p>
+              <p class="conteudo">{{ formulario.get("conteudo")?.value }}</p>
+              <p class="autoria">{{ formulario.get("autoria")?.value }}</p>
             </div>
           </div>
         </div>
@@ -81,8 +98,7 @@
             type="radio"
             id="modelo3"
             value="modelo3"
-            name="modelo-card"
-            [(ngModel)]="pensamento.modelo"
+            formControlName="modelo"
           />
           <div class="custom-radio">
             <span></span>
@@ -98,19 +114,21 @@
             />
           </div>
           <div class="conteudo_modelo">
-            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="conteudo">{{ formulario.get("conteudo")?.value }}</p>
             <p class="autoria">
-              <b>{{ pensamento.autoria }}</b>
+              <b>{{ formulario.get("autoria")?.value }}</b>
             </p>
           </div>
         </div>
       </div>
     </div>
     <div class="botoes">
-      <button (click)="CriarPensamento()" class="botao salvar">Salvar</button>
-      <button  (click)="Cancelar()" class="botao cancelar">
-        cancelar
-      </button>
+      <button
+      [disabled]="!formulario.valid"
+      [ngClass]="habilitarBotao()"
+      (click)="CriarPensamento()"
+      class="botao__salvar">Salvar</button>
+      <button (click)="Cancelar()" class="botao cancelar">cancelar</button>
     </div>
   </form>
 </section>
